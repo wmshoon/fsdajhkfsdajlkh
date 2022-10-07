@@ -7,7 +7,6 @@
     <title>title</title>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/eyecare.css" />
     <link rel="stylesheet" href="./css/collection.css" />
   </head>
   <body>
@@ -29,17 +28,16 @@
           <div class="profile">
             <p></p>
             <img src="./images/profile.png" alt="" />
-            <div id="username" class="show">곽준호</div>
+            <a id="username" href="#ex1" rel="modal:open">곽준호</a>
           </div>
         </div>
         <div class="item-scrapping-area">
           <div class="title-text">상품 URL을 입력하세요</div>
           <div class="url-input"><input type="text" name="" id="" /></div>
-          <div class="scv-file-import">
-            <!-- <div>엑셀 파일첨부 +</div>
-            <div></div> -->
-          </div>
-          <div class="btn-start-collecting">수집시작</div>
+          <form class="scv-file-import">
+            <input type="file" name="" id="" />
+          </form>
+          <div onclick="location.href='./LOGOUT'" class="btn-start-collecting">수집시작</div>
           <div class="btns">
             <div id="btn-total-items">
               <p>총 상품수</p>
@@ -130,12 +128,7 @@
         </div>
       </div>
     </div>
-    <div class="background">
-      <div class="logout-and-mypage-popup">
-        <div class="logout-and-mypage-inner" onclick="location.href='./LOGOUT'" id="logout">로그아웃</div>
-        <div class="logout-and-mypage-inner" onclick="location.href='./mypage.html'">마이페이지</div>
-      </div>
-    </div>
+
     <script src="./js/main.js"></script>
   </body>
 </html>

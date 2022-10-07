@@ -37,8 +37,10 @@
   margin-top: 16px;
   display: flex;
   height: 40px;
-  background-color: grey;
   margin-bottom: 23px;
+  align-items: center;
+  justify-content: left;
+  margin-left: 32px;
 }
 .btn-start-collecting {
   display: flex;

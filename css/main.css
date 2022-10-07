@@ -109,50 +109,7 @@ a {
   font-weight: 700;
   font-size: 14px;
 }
-/*background popup modals */
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  /* height: 1080px; */
-  width: 100%;
-  min-height: 1080px;
-  min-height: 100vh;
-  z-index: 1000;
-
-  /* 숨기기 */
-  z-index: -1;
-  opacity: 0;
-  transition: all 0.5s;
-}
-
-.show {
-  opacity: 1;
-  z-index: 1000;
-  transition: all 0.5s;
-}
-
-.logout-and-mypage-popup {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  right: 214px;
-  top: 76px;
-
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-
-  width: 150px;
-  height: 64px;
-}
-
-.logout-and-mypage-popup .logout-and-mypage-inner {
-  margin-left: 16px;
-}
 /* TODO: */
 /* 방향: 하나의 백그라운드가 하나의 뭐시기 먹음 = 백그라운드 여러게 만들어서 백그랑누드 하나당 하나 할당해 */
 /* FIXME: */
@@ -160,4 +117,11 @@ a {
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
+}
+
+#username {
+  color: #000;
+}
+.blocker {
+  background-color: rgba(0, 0, 0, 0);
 }

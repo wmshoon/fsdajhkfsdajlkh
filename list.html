@@ -7,8 +7,12 @@
     <title>List</title>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/eyecare.css" />
     <link rel="stylesheet" href="./css/list.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   </head>
   <body>
     <div class="main-container">
@@ -29,7 +33,7 @@
           <div class="profile">
             <p></p>
             <img src="./images/profile.png" alt="" />
-            <div id="username" class="show">곽준호</div>
+            <a id="username" href="#ex1" rel="modal:open">곽준호</a>
           </div>
         </div>
         <div class="main-content-area">
@@ -103,175 +107,16 @@
               </div>
             </div>
             <!--  -->
-            <!--  -->
-            <div class="item">
-              <div class="id-and-photo">
-                <label for="item1" class="id">
-                  <input type="checkbox" name="" id="item1" />
-                  <p>No.216851368413</p>
-                </label>
-                <img class="photo" src="./images/mbp.png" alt="" />
-              </div>
-              <div class="item-detail">
-                <div class="item-inner">
-                  <div class="item-inner-belong-of-item-container">
-                    <div class="belong-of-item">디지털 | 가전 > 노트북액세서리 > 노트북받침대 | 쿨러</div>
-                    <div class="weeee">
-                      <img id="never" src="./images/never_unactivate.png" alt="" />
-                      <img id="tenonest" src="./images/11st_unactivate.png" alt="" />
-                      <img id="gmarket" src="./images/gmarket_unactivate.png" alt="" />
-                      <img id="action" src="./images/action_unactivate.png" alt="" />
-                      <img id="coupang" src="./images/coupang_unactivate.png" alt="" />
-                      <img id="lotteOn" src="./images/lotteOn_unactivate.png" alt="" />
-                      <img id="wmp" src="./images/wmp_unactivate.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="link-move-and-delete">
-                    <img src="./images/link_move.png" alt="" />
-                    <img src="./images/delete.png" alt="" />
-                  </div>
-                </div>
-                <div class="item-inner-title">
-                  <div class="yellow-box"></div>
-                  <div>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</div>
-                </div>
-                <div class="item-inner-edit-title">
-                  <input type="text" />
-                </div>
-                <div class="item-inner-btn-and-img">
-                  <div class="btn-item-option-edit">상품 옵션 수정</div>
-                  <div class="btn-item-page-detail-edit">상세페이지 수정</div>
-                  <div class="delivery-fee">배송비:120,000원</div>
-                  <div class="img-container">
-                    <img id="never" src="./images/never.png" alt="" />
-                    <img id="tenonest" src="./images/11st.png" alt="" />
-                    <img id="gmarket" src="./images/gmarket.png" alt="" />
-                    <img id="action" src="./images/action.png" alt="" />
-                    <img id="coupang" src="./images/coupang.png" alt="" />
-                    <img id="lotteOn" src="./images/lotteOn.png" alt="" />
-                    <img id="wmp" src="./images/Wemakep.png" alt="" />
-                  </div>
-                  <div class="btn-upload">업로드</div>
-                </div>
-              </div>
-            </div>
-            <!--  -->
-            <!--  -->
-            <div class="item">
-              <div class="id-and-photo">
-                <label for="item1" class="id">
-                  <input type="checkbox" name="" id="item1" />
-                  <p>No.216851368413</p>
-                </label>
-                <img class="photo" src="./images/mbp.png" alt="" />
-              </div>
-              <div class="item-detail">
-                <div class="item-inner">
-                  <div class="item-inner-belong-of-item-container">
-                    <div class="belong-of-item">디지털 | 가전 > 노트북액세서리 > 노트북받침대 | 쿨러</div>
-                    <div class="weeee">
-                      <img id="never" src="./images/never_unactivate.png" alt="" />
-                      <img id="tenonest" src="./images/11st_unactivate.png" alt="" />
-                      <img id="gmarket" src="./images/gmarket_unactivate.png" alt="" />
-                      <img id="action" src="./images/action_unactivate.png" alt="" />
-                      <img id="coupang" src="./images/coupang_unactivate.png" alt="" />
-                      <img id="lotteOn" src="./images/lotteOn_unactivate.png" alt="" />
-                      <img id="wmp" src="./images/wmp_unactivate.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="link-move-and-delete">
-                    <img src="./images/link_move.png" alt="" />
-                    <img src="./images/delete.png" alt="" />
-                  </div>
-                </div>
-                <div class="item-inner-title">
-                  <div class="yellow-box"></div>
-                  <div>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</div>
-                </div>
-                <div class="item-inner-edit-title">
-                  <input type="text" />
-                </div>
-                <div class="item-inner-btn-and-img">
-                  <div class="btn-item-option-edit">상품 옵션 수정</div>
-                  <div class="btn-item-page-detail-edit">상세페이지 수정</div>
-                  <div class="delivery-fee">배송비:120,000원</div>
-                  <div class="img-container">
-                    <img id="never" src="./images/never.png" alt="" />
-                    <img id="tenonest" src="./images/11st.png" alt="" />
-                    <img id="gmarket" src="./images/gmarket.png" alt="" />
-                    <img id="action" src="./images/action.png" alt="" />
-                    <img id="coupang" src="./images/coupang.png" alt="" />
-                    <img id="lotteOn" src="./images/lotteOn.png" alt="" />
-                    <img id="wmp" src="./images/Wemakep.png" alt="" />
-                  </div>
-                  <div class="btn-upload">업로드</div>
-                </div>
-              </div>
-            </div>
-            <!--  -->
-            <!--  -->
-            <div class="item">
-              <div class="id-and-photo">
-                <label for="item1" class="id">
-                  <input type="checkbox" name="" id="item1" />
-                  <p>No.216851368413</p>
-                </label>
-                <img class="photo" src="./images/mbp.png" alt="" />
-              </div>
-              <div class="item-detail">
-                <div class="item-inner">
-                  <div class="item-inner-belong-of-item-container">
-                    <div class="belong-of-item">디지털 | 가전 > 노트북액세서리 > 노트북받침대 | 쿨러</div>
-                    <div class="weeee">
-                      <img id="never" src="./images/never_unactivate.png" alt="" />
-                      <img id="tenonest" src="./images/11st_unactivate.png" alt="" />
-                      <img id="gmarket" src="./images/gmarket_unactivate.png" alt="" />
-                      <img id="action" src="./images/action_unactivate.png" alt="" />
-                      <img id="coupang" src="./images/coupang_unactivate.png" alt="" />
-                      <img id="lotteOn" src="./images/lotteOn_unactivate.png" alt="" />
-                      <img id="wmp" src="./images/wmp_unactivate.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="link-move-and-delete">
-                    <img src="./images/link_move.png" alt="" />
-                    <img src="./images/delete.png" alt="" />
-                  </div>
-                </div>
-                <div class="item-inner-title">
-                  <div class="yellow-box"></div>
-                  <div>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</div>
-                </div>
-                <div class="item-inner-edit-title">
-                  <input type="text" />
-                </div>
-                <div class="item-inner-btn-and-img">
-                  <div class="btn-item-option-edit">상품 옵션 수정</div>
-                  <div class="btn-item-page-detail-edit">상세페이지 수정</div>
-                  <div class="delivery-fee">배송비:120,000원</div>
-                  <div class="img-container">
-                    <img id="never" src="./images/never.png" alt="" />
-                    <img id="tenonest" src="./images/11st.png" alt="" />
-                    <img id="gmarket" src="./images/gmarket.png" alt="" />
-                    <img id="action" src="./images/action.png" alt="" />
-                    <img id="coupang" src="./images/coupang.png" alt="" />
-                    <img id="lotteOn" src="./images/lotteOn.png" alt="" />
-                    <img id="wmp" src="./images/Wemakep.png" alt="" />
-                  </div>
-                  <div class="btn-upload">업로드</div>
-                </div>
-              </div>
-            </div>
-            <!--  -->
           </div>
         </div>
       </div>
     </div>
-    <div class="background">
-      <div class="logout-and-mypage-popup">
-        <div class="logout-and-mypage-inner" onclick="location.href='./LOGOUT'" id="logout">로그아웃</div>
-        <div class="logout-and-mypage-inner" onclick="location.href='./mypage.html'">마이페이지</div>
-      </div>
-    </div>
     <script src="./js/main.js"></script>
+    <!-- modal -->
+    <div id="ex1" class="modal">
+      <div class="logout-and-mypage-inner" onclick="location.href='./LOGOUT'" id="logout">로그아웃</div>
+      <div class="logout-and-mypage-inner" onclick="location.href='./mypage.html'">마이페이지</div>
+      <a href="#" rel="modal:close">Close</a>
+    </div>
   </body>
 </html>
