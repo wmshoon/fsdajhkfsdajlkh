@@ -1,0 +1,130 @@
+/* home.html 전용 파일 */
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1160px;
+  height: 648px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 48px;
+}
+
+.main-content img {
+  width: 42px;
+  height: 42px;
+  margin-right: 24px;
+  margin-left: 25px;
+}
+
+.main-content p {
+  color: #ffffff;
+}
+
+/* three btns */
+.remaining-service-days,
+.user-guide,
+.service-center {
+  display: flex;
+  align-items: center;
+  width: 370px;
+  /* 사실 371 카카오톡에 보더 1 픽셀 들어가서 이럼 */
+  height: 90px;
+  border-radius: 30px;
+}
+
+.remaining-service-days {
+  background-color: #04b7cc;
+}
+.remaining-service-days p {
+  font-size: 20px;
+  font-weight: 700;
+}
+.remaining-service-days div {
+  margin-left: 73px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.user-guide {
+  margin-left: 24px;
+  background-color: #2bbd02;
+  font-size: 20px;
+  font-weight: 700;
+}
+.user-guide p {
+  margin-right: 164px;
+}
+
+.service-center {
+  margin-left: 24px;
+  background-color: #fae100;
+  border: 1px solid black;
+}
+.service-center p {
+  color: #000000;
+}
+
+.service-center p:first-child {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.service-center p:last-child {
+  margin-top: 2px;
+}
+.service-center p:not(:first-child) {
+  margin-right: 204px;
+  font-size: 12px;
+  font-weight: 400px;
+}
+
+.days-remain {
+  color: white;
+  margin-right: 36px;
+}
+/*  */
+
+/* update-log-container */
+
+.update-log-container {
+  border-radius: 30px;
+  width: 1160px;
+  min-height: 480px;
+  max-height: 640px;
+  margin-top: 48px;
+  background-color: #ffffff;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.update-log-container::-webkit-scrollbar {
+  display: none;
+}
+.update-log-container #update-log {
+  margin-left: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.update-log-container p {
+  color: #000000;
+}
+
+.update-log {
+  display: flex;
+}
+
+#date-of-update {
+  margin-right: 24px;
+  margin-left: 32px;
+  font-size: 16px;
+  font-weight: 700;
+}
+#detail-of-update {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}

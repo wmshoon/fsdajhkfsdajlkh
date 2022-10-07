@@ -1,0 +1,121 @@
+.main-content-area {
+  display: flex;
+  flex-direction: column;
+  width: 1166px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  height: 952px;
+}
+.api_main_homeicon {
+  border-bottom: 1px solid #ddd;
+  color: #04b7cc;
+  font-size: 32px;
+  margin-bottom: 78px;
+  position: relative;
+}
+
+.api_main_homeicon div {
+  width: 182px;
+  height: 42px;
+  border-bottom: 1px solid #04b7cc;
+  font-family: "Karbon";
+  letter-spacing: -0.02em;
+  display: flex;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.api_main_homeicon div img {
+  margin-right: 9px;
+}
+
+.api_main_homeicon div span {
+  font-size: 32px;
+  margin-top: -2px;
+  font-family: "NanumSquare";
+  letter-spacing: -0.02em;
+  margin-right: 12px;
+}
+
+.api_main_homeicon div .title_size {
+  font-size: 32px;
+  margin-top: 3px;
+}
+
+.title {
+  margin-bottom: 15px;
+  width: 100%;
+  margin-left: 32px;
+  margin-top: 24px;
+}
+
+.title p {
+  font-size: 19px;
+  color: #373737;
+  display: flex;
+  align-items: center;
+}
+
+.title img {
+  margin-right: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.api_storebox {
+  margin-top: 32px;
+  width: 441px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-right: 32px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.api_storebox p {
+  font-size: 19px;
+  font-weight: 200;
+  color: #373737;
+}
+
+.api_storebox p {
+  margin-bottom: 7px;
+  color: #373737;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.api_storebox input {
+  height: 34px;
+  width: 377px;
+  border: 1px solid #979797;
+  background-color: #f7f7f7;
+  margin-bottom: 24px;
+}
+
+.api_storebox .confirm_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.api_storebox .submit_btn {
+  width: 92px;
+  height: 34px;
+  background-color: #04b7cc;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fff;
+  border-radius: 16px;
+  border-style: none;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+.api_storebox .text_field {
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #dadada;
+}

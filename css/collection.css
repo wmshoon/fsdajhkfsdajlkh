@@ -1,0 +1,171 @@
+.item-scrapping-area {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  height: 775px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 48px;
+  background: #ffffff;
+  border-radius: 30px;
+}
+.title-text {
+  width: 196px;
+  height: 20px;
+  margin-left: 32px;
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.url-input {
+  width: 1096px;
+  height: 120px;
+  margin-top: 27px;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.url-input input {
+  border-radius: 10px;
+  border: 1px solid #dadada;
+  height: 100%;
+  width: 100%;
+}
+
+.scv-file-import {
+  margin-top: 16px;
+  display: flex;
+  height: 40px;
+  background-color: grey;
+  margin-bottom: 23px;
+}
+.btn-start-collecting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 160px;
+  border-radius: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #04b7cc;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.amount {
+  font-size: 14px;
+  font-weight: 700;
+}
+#btn-total-items div {
+  height: 16px;
+  border-left: 1px solid #dadada;
+}
+#btn-fail-items div {
+  height: 16px;
+  border-left: 1px solid #d60000;
+}
+#btn-success-items div {
+  height: 16px;
+  border-left: 1px solid #04b7cc;
+}
+
+#btn-total-items,
+#btn-fail-items,
+#btn-success-items {
+  justify-content: space-around;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  height: 37px;
+  width: 130px;
+  border-radius: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#btn-fail-items {
+  color: #d60000;
+}
+#btn-success-items {
+  color: #04b7cc;
+}
+.fail-items-area {
+  width: 1076px;
+  height: 280px;
+  /* height 확정 아님. 디자이너 개새끼가 안정해둠 */
+  margin-top: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  /* display: none; */
+}
+
+.fail-item-scroll-area {
+  overflow-y: scroll;
+  height: 251px;
+  scrollbar-width: none;
+}
+.fail-item-scroll-area::-webkit-scrollbar {
+  display: none;
+}
+#fail-item {
+  font-size: 16px;
+  font-weight: 700;
+}
+.description {
+  align-items: center;
+  height: 37px;
+  width: 100%;
+  display: flex;
+  background: #f7f7f7;
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+  margin-bottom: 16px;
+}
+.description div {
+  font-size: 14px;
+  font-weight: 400;
+}
+.description div:first-child {
+  margin-left: 11px;
+}
+.description div:nth-child(2) {
+  margin-left: 292px;
+}
+.description div:last-child {
+  margin-left: 289px;
+}
+
+/*  */
+
+#fail-item {
+  margin-bottom: 16px;
+}
+
+.fail-item-list {
+  display: flex;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.fail-item-list div:first-child {
+  margin-left: 20px;
+  margin-right: 64px;
+}
+.fail-item-list div:nth-child(2) {
+  margin-right: 44px;
+}
+.fail-item-list div:not(:first-child) {
+  color: #d60000;
+}

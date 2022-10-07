@@ -1,0 +1,90 @@
+.main-content-area {
+  height: 952px;
+  width: 1166px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.remaining-days,
+.delivery-fee {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 30px;
+  margin-bottom: 16px;
+  height: 85px;
+}
+.remaining-days {
+  margin-top: 40px;
+  height: 69px;
+  margin-bottom: 16px;
+}
+.set-selling-price {
+  margin-bottom: 16px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+.set-selling-price div {
+  align-items: center;
+  display: flex;
+}
+.title {
+  margin-left: 32px;
+  font-size: 16px;
+  font-weight: 700;
+}
+#line {
+  height: 18px;
+  border-left: 1px solid #d3d3d3;
+  margin-right: 24px;
+}
+.img-setting {
+  height: 155px;
+  flex-direction: column;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+.img-setting div {
+  display: flex;
+}
+
+.number-container {
+  border-radius: 10px;
+  height: 37px;
+  border: 1px solid #dadada;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  margin-right: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 60px;
+}
+
+.threeword-title {
+  margin-right: 144px;
+}
+.seller-setting-title {
+  margin-right: 110px;
+}
+#notification {
+  margin-top: 16px;
+  margin-left: 223px;
+  color: #666666;
+  font-size: 12px;
+  font-weight: 400;
+}
+.detail-image-title {
+  margin-left: 32px;
+}
+.img-setting-inner {
+  margin-top: auto;
+  margin-bottom: auto;
+}

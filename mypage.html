@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mypage</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/eyecare.css" />
+    <link rel="stylesheet" href="./css/mypage.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="side-bar">
+        <img id="logo" src="./images/DINO.png" alt="" />
+        <a class="home" href="./home.html" class="home"><img src="./images/home_unactivate.png" alt="" />Home</a>
+        <a class="collection" href="./collection.html" class="serch-center"><img src="./images/collect_item_unactivate.png" alt="" />상품수집</a>
+        <a class="list" href="./list.html" class="item-list"><img src="./images/products_list_unactivate.png" alt="" />상품리스트</a>
+        <a class="mypage" href="./mypage.html" class="my-page"><img src="./images/mypage_activate.png" />마이페이지</a>
+        <a class="API" href="./API.html" class="api-setting"><img src="./images/API_setting_unactivate.png" alt="" />API 설정</a>
+      </div>
+      <div class="main-content-container">
+        <div class="top-naneline">
+          <div class="currentPage">
+            <img src="./images/top_line_home.png" alt="" />
+            <p>Mypage</p>
+          </div>
+          <div class="profile">
+            <p></p>
+            <img src="./images/profile.png" alt="" />
+            <div class="show" id="username">곽준호</div>
+          </div>
+        </div>
+        <div class="main-content-area">
+          <div class="remaining-days">
+            <div class="title threeword-title">잔여일</div>
+            <div id="line"></div>
+            <div>17일</div>
+          </div>
+          <div class="delivery-fee">
+            <div class="title threeword-title">배송비</div>
+            <div id="line"></div>
+            <div>기본배송비</div>
+            <input type="text" class="number-container" />
+            <div>교환</div>
+            <input type="text" class="number-container" />
+            <div>반품</div>
+            <input type="text" class="number-container" />
+          </div>
+          <div class="set-selling-price">
+            <div>
+              <div class="title seller-setting-title">판매가 설정</div>
+              <div id="line"></div>
+              <div>마진율</div>
+              <input type="text" class="number-container" />
+              <div>고정환율</div>
+              <input type="text" class="number-container" />
+              <div>수수료</div>
+              <input type="text" class="number-container" />
+              <div>추가값</div>
+              <input type="text" class="number-container" />
+            </div>
+            <div id="notification">*판매가 공식 : 제품가격X마진X환율X수수료 + 추가값</div>
+          </div>
+          <div class="img-setting">
+            <div class="img-setting-inner">
+              <div class="title">상세페이지 상단 이미지</div>
+              <div class="detail-image-title" id="line"></div>
+              <div>
+                <input type="file" />
+              </div>
+            </div>
+            <div class="img-setting-inner">
+              <div class="title">상세페이지 하단 이미지</div>
+              <div class="detail-image-title" id="line"></div>
+              <div>
+                <input type="file" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background">
+      <div class="logout-and-mypage-popup">
+        <div class="logout-and-mypage-inner" onclick="location.href='./LOGOUT'" id="logout">로그아웃</div>
+        <div class="logout-and-mypage-inner" onclick="location.href='./mypage.html'">마이페이지</div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

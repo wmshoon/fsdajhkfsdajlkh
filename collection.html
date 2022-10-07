@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/eyecare.css" />
+    <link rel="stylesheet" href="./css/collection.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="side-bar">
+        <img id="logo" src="./images/DINO.png" alt="" />
+        <a class="home" href="./home.html" class="home"><img src="./images/home_unactivate.png" alt="" />Home</a>
+        <a class="collection" href="./collection.html" class="serch-center"><img src="./images/collect_item_activate.png" alt="" />상품수집</a>
+        <a class="list" href="./list.html" class="item-list"><img src="./images/products_list_unactivate.png" alt="" />상품리스트</a>
+        <a class="mypage" href="./mypage.html" class="my-page"><img src="./images/mypage_unactivate.png" />마이페이지</a>
+        <a class="API" href="./API.html" class="api-setting"><img src="./images/API_setting_unactivate.png" alt="" />API 설정</a>
+      </div>
+      <div class="main-content-container">
+        <div class="top-naneline">
+          <div class="currentPage">
+            <img src="./images/top_line_home.png" alt="" />
+            <p>Item scrapping</p>
+          </div>
+          <div class="profile">
+            <p></p>
+            <img src="./images/profile.png" alt="" />
+            <div id="username" class="show">곽준호</div>
+          </div>
+        </div>
+        <div class="item-scrapping-area">
+          <div class="title-text">상품 URL을 입력하세요</div>
+          <div class="url-input"><input type="text" name="" id="" /></div>
+          <div class="scv-file-import">
+            <!-- <div>엑셀 파일첨부 +</div>
+            <div></div> -->
+          </div>
+          <div class="btn-start-collecting">수집시작</div>
+          <div class="btns">
+            <div id="btn-total-items">
+              <p>총 상품수</p>
+              <div></div>
+              <p class="amount">17</p>
+            </div>
+            <div id="btn-success-items">
+              <p>성공</p>
+              <div></div>
+              <p class="amount">12</p>
+            </div>
+            <div id="btn-fail-items">
+              <p>실패</p>
+              <div></div>
+              <p class="amount">2</p>
+            </div>
+          </div>
+          <div class="fail-items-area">
+            <div id="fail-item">실패 상품</div>
+            <div class="description">
+              <div>번호</div>
+              <div>상품 링크</div>
+              <div>실패 사유</div>
+            </div>
+            <div class="fail-item-scroll-area">
+              <div class="fail-item-list">
+                <div>1</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>2</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>1</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>2</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>1</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>2</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>1</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>2</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>1</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>2</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>1</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+              <div class="fail-item-list">
+                <div>2</div>
+                <div>https://detail.tmall.com/item.htm?spm=a230r.1.14.203.6e00fdc1eC8kAq&id=61...</div>
+                <div>링크오류</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background">
+      <div class="logout-and-mypage-popup">
+        <div class="logout-and-mypage-inner" onclick="location.href='./LOGOUT'" id="logout">로그아웃</div>
+        <div class="logout-and-mypage-inner" onclick="location.href='./mypage.html'">마이페이지</div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

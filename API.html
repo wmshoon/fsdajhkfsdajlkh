@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API setting</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/eyecare.css" />
+    <link rel="stylesheet" href="./css/API.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="side-bar">
+        <img id="logo" src="./images/DINO.png" alt="" />
+        <a class="home" href="./home.html" class="home"><img src="./images/home_unactivate.png" alt="" />Home</a>
+        <a class="collection" href="./collection.html" class="serch-center"><img src="./images/collect_item_unactivate.png" alt="" />상품수집</a>
+        <a class="list" href="./list.html" class="item-list"><img src="./images/products_list_unactivate.png" alt="" />상품리스트</a>
+        <a class="mypage" href="./mypage.html" class="my-page"><img src="./images/mypage_unactivate.png" />마이페이지</a>
+        <a class="API" href="./API.html" class="api-setting"><img src="./images/API_setting_activate.png" alt="" />API 설정</a>
+      </div>
+      <div class="main-content-container">
+        <div class="top-naneline">
+          <div class="currentPage">
+            <img src="./images/top_line_home.png" alt="" />
+            <p>API Setting</p>
+          </div>
+          <div class="profile">
+            <p></p>
+            <img src="./images/profile.png" alt="" />
+            <div id="username" class="show">곽준호</div>
+          </div>
+        </div>
+
+        <div class="main-content-area">
+          <!-- 네이버 스마트스토어 -->
+          <div class="api_storebox">
+            <div class="title">
+              <p><img src="./images/Never.png" />스마트스토어</p>
+            </div>
+            <div>
+              <p>ID</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div>
+              <p>Password</p>
+              <input type="password" name="password" class="text_field" placeholder="" />
+            </div>
+            <div class="confirm_btn">
+              <input type="submit" value="확 인" class="submit_btn" />
+            </div>
+          </div>
+
+          <!-- ESM (옥션 로그인) -->
+          <div class="api_storebox">
+            <div class="title">
+              <p><img src="./images/action_icon.png" />ESM (옥션 로그인)</p>
+            </div>
+            <div>
+              <p>ID</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div>
+              <p>Password</p>
+              <input type="password" name="password" class="text_field" placeholder="" />
+            </div>
+            <div class="confirm_btn">
+              <input type="submit" value="확 인" class="submit_btn" />
+            </div>
+          </div>
+
+          <div class="api_storebox">
+            <div class="title">
+              <p><img src="./images/11st_icon.png" />11번가</p>
+            </div>
+            <div>
+              <p>API KEY</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div class="confirm_btn">
+              <input type="submit" value="확 인" class="submit_btn" />
+            </div>
+          </div>
+
+          <!--쿠팡-->
+          <div class="api_storebox">
+            <div class="title">
+              <p><img src="./images/coupang_icon.png" />쿠팡</p>
+            </div>
+            <div>
+              <p>ID</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div>
+              <p>업체코드</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div>
+              <p>Access Key</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div>
+              <p>Secret Key</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div>
+              <p>구매대행 출고 소요일</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div class="confirm_btn">
+              <input type="submit" value="확 인" class="submit_btn" />
+            </div>
+          </div>
+
+          <!--위메프-->
+          <div class="api_storebox">
+            <div class="title">
+              <p><img src="./images/wmp_icon.png" />위메프</p>
+            </div>
+            <div>
+              <p>ID</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div>
+              <p>Password</p>
+              <input type="password" name="password" class="text_field" placeholder="" />
+            </div>
+            <div class="confirm_btn">
+              <input type="submit" value="확 인" class="submit_btn" />
+            </div>
+          </div>
+
+          <!-- 롯데온 -->
+          <div class="api_storebox">
+            <div class="title">
+              <p><img src="./images/LotteOn_icon.png" />롯데온</p>
+            </div>
+            <div>
+              <p>API KEY</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div>
+              <p>배송 예정일</p>
+              <input type="text" name="email" class="text_field" placeholder="" />
+            </div>
+            <div class="confirm_btn">
+              <input type="submit" value="확 인" class="submit_btn" />
+            </div>
+          </div>
+        </div>
+        <!-- end of main-content-area -->
+      </div>
+      <!-- end of main-content-container -->
+    </div>
+    <div class="background">
+      <div class="logout-and-mypage-popup">
+        <div class="logout-and-mypage-inner" onclick="location.href='./LOGOUT'" id="logout">로그아웃</div>
+        <div class="logout-and-mypage-inner" onclick="location.href='./mypage.html'">마이페이지</div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
