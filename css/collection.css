@@ -113,6 +113,9 @@
 }
 
 .fail-item-scroll-area {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
   overflow-y: scroll;
   height: 251px;
   scrollbar-width: none;
@@ -133,19 +136,12 @@
   border-top: 1px solid #dadada;
   border-bottom: 1px solid #dadada;
   margin-bottom: 16px;
+  justify-content: space-around;
 }
 .description div {
   font-size: 14px;
   font-weight: 400;
-}
-.description div:first-child {
-  margin-left: 11px;
-}
-.description div:nth-child(2) {
-  margin-left: 292px;
-}
-.description div:last-child {
-  margin-left: 289px;
+  display: flex;
 }
 
 /*  */
@@ -159,14 +155,14 @@
   margin-bottom: 12px;
   font-size: 14px;
   font-weight: 400;
+  justify-content: space-around;
 }
 
 .fail-item-list div:first-child {
-  margin-left: 20px;
-  margin-right: 64px;
+  text-align: center;
 }
 .fail-item-list div:nth-child(2) {
-  margin-right: 44px;
+  width: 550px;
 }
 .fail-item-list div:not(:first-child) {
   color: #d60000;

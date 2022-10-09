@@ -59,7 +59,7 @@
 .service-center {
   margin-left: 24px;
   background-color: #fae100;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 .service-center p {
   color: #000000;
