@@ -8,3 +8,9 @@ for (let i = 0; i < 5; i++) {
     targetText.style.color = selectedColor;
   }
 }
+
+// mypage jQuery
+$(".img-setting-inner input[type=file]").on("change", function () {
+  var fileName = $(this).val();
+  $(this).next().val(fileName);
+});

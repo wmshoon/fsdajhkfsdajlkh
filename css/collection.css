@@ -167,3 +167,43 @@
 .fail-item-list div:not(:first-child) {
   color: #d60000;
 }
+.img-setting-inner {
+  margin-left: 32px;
+  margin-top: 16px;
+  margin-bottom: 23px;
+  display: flex;
+  align-items: center;
+}
+.img-setting-inner label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  width: 156px;
+  height: 40px;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #dadada;
+}
+
+.img-setting-inner img {
+  width: 24px;
+  height: 24px;
+}
+.file {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+.upload-name {
+  height: 40px;
+  width: 256px;
+  border-radius: 4px;
+  border: 1px solid #dadada;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 14px;
+}
