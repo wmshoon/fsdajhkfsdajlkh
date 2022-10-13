@@ -1,3 +1,7 @@
+.list {
+  color: #04b7cc;
+}
+
 .main-content-area {
   height: 952px;
   width: 1166px;
@@ -55,10 +59,7 @@
   width: 300px;
   height: 100%;
 }
-.search img {
-  width: 24px;
-  height: 24px;
-}
+
 .search button {
   margin-right: auto;
   margin-left: auto;
@@ -123,7 +124,7 @@
   align-items: center;
 }
 
-.item-detail .item-inner-belong-of-item-container {
+.item-inner-belong-of-item-container {
   display: flex;
   width: 800px;
   height: 24px;
@@ -131,7 +132,7 @@
   border-radius: 10px;
 }
 
-.item-detail .belong-of-item {
+.belong-of-item {
   display: flex;
   height: 24px;
   width: min-content;
@@ -146,30 +147,37 @@
 }
 
 #never {
+  margin-right: 17px;
   height: 12px;
   width: 12px;
 }
 #tenonest {
+  margin-right: 17px;
   height: 12px;
   width: 24px;
 }
 #gmarket {
+  margin-right: 17px;
   height: 16px;
   width: 16px;
 }
 #action {
+  margin-right: 17px;
   height: 15px;
   width: 18px;
 }
 #coupang {
+  margin-right: 17px;
   height: 20px;
   width: 20px;
 }
 #lotteOn {
+  margin-right: 17px;
   height: 11.11px;
   width: 20px;
 }
 #wmp {
+  margin-right: 17px;
   height: 16px;
   width: 16px;
 }
@@ -352,25 +360,23 @@
   border-style: none;
   background-color: transparent;
 }
-
-.item_list .basiclist_item {
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
 .item_list .basiclist_item {
   background-color: #fff;
   padding: 16px 21px;
   margin-bottom: 0;
   height: auto;
   display: flex;
-  margin-top: 15px;
   width: 1120px;
   margin-left: auto;
   margin-right: auto;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .item_list .basiclist_item:first-child {
-  margin-top: 22px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+
+  margin-top: 15px;
 }
 
 .number_checkbox {
@@ -383,6 +389,7 @@
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
+  margin-left: 8px;
 }
 
 .number_checkbox input[type="checkbox"] + label {
@@ -584,9 +591,6 @@
   padding-left: 12px;
 }
 
-.basiclist_item .item_info div ul li img {
-  margin-right: 17px;
-}
 .item_list .basiclist_item .item_info .top {
   background-color: #f7f7f7;
   border-radius: 30px;
@@ -620,8 +624,8 @@
 
 .item_list .basiclist_item .item_info .item_list_title ul li:nth-child(1) {
   width: 100%;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   padding: 9px 0;
   font-size: 16px;
   color: #505050;
@@ -630,26 +634,23 @@
   align-items: center;
   justify-content: space-between;
 }
-
-.item_list .basiclist_item .item_info .item_list_title ul li:nth-child(1) span {
+.item_list .basiclist_item .item_info .item_list_title ul li p:first-child {
+  margin-left: 16px;
+}
+.item_list .basiclist_item .item_info .item_list_title ul li:first-child span {
   background-color: transparent;
   color: #aaaaaa;
   font-size: 10px;
   font-weight: 500;
-  margin: 0;
+  margin-left: auto;
+  margin-right: 16px;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .item_list .basiclist_item .item_info .item_list_title ul li:nth-child(2) {
-  margin: 11px 0 14px 3px;
-}
-
-.item_list .basiclist_item .item_info .item_list_title ul li:nth-child(2) span {
-  color: #af7624;
-  border-style: none;
-  font-weight: 600;
-  background-color: transparent;
-  padding: 0;
-  font-size: 13px;
+  margin-top: 11px;
+  width: 450px;
 }
 
 .item_list .basiclist_item .item_info .item_list_title .adjustment {
@@ -660,32 +661,36 @@
   margin: 0 0 0 8px;
 }
 
-.item_list .basiclist_item .item_info .item_list_title ul .adjustment span {
+.adjustment span:not(:last-child) {
   background-color: #fff;
-  border: 1px solid #8fc6e2;
-  color: #505050;
+  border: 1px solid #04b7cc;
   font-weight: 300;
   margin-right: 5px;
   padding: 0;
   display: flex;
-  align-items: center;
-  border-radius: 13px;
+  border-radius: 8px;
   box-sizing: border-box;
-  width: 137px;
-  justify-content: center;
-  height: 27px;
+  width: 126px;
+  height: 40px;
   padding: 0 12px;
+  align-items: center;
+  justify-content: center;
 }
 
-.item_list .basiclist_item .item_info .item_list_title ul .adjustment a {
+.adjustment {
+  display: flex;
+  align-items: center;
+}
+
+.adjustment a {
   font-size: 13px;
-  color: #505050;
+  color: #04b7cc;
   font-weight: 500;
 }
 
-.item_list .basiclist_item .item_info .item_list_title ul li:nth-child(3) .fontcolor_gold {
+.item_list .basiclist_item .item_info .item_list_title ul li:nth-child(2) .fontcolor_gold {
   width: auto;
-  color: #af7624;
+  color: #f5771b;
   border-style: none;
   margin-left: 10px;
   font-weight: 500;
@@ -694,13 +699,9 @@
   font-size: 13px;
 }
 
-.item_list .basiclist_item .item_info {
-  display: inline-block;
-}
-
 .basiclist_item .item_info .item_list_homepageicon > div > ul {
+  margin-left: auto;
   display: flex;
-  align-items: flex-start;
 }
 
 .basiclist_item .item_info .item_list_homepageicon > div > ul div {
@@ -721,40 +722,41 @@
 
 .basiclist_item .item_info .item_list_homepageicon {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+}
+.basiclist_item .item_info .item_list_homepageicon div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+}
+.basiclist_item .item_info .item_list_homepageicon img {
+  width: 28px;
+  height: 28px;
 }
 
 .basiclist_item .item_info .item_list_homepageicon div:nth-child(2) {
   cursor: pointer;
-  padding: 12px 19px 7px 23px;
+  height: 40px;
+  width: 110px;
+  border-radius: 16px;
   background-color: #04b7cc;
-  border-radius: 20px;
-  font-size: 13px;
   display: flex;
   align-items: center;
-  width: 103px;
-  height: 38px;
-  box-sizing: border-box;
-  margin-right: 0;
+  justify-content: space-around;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 32px;
+  color: #ffffff;
+  margin-left: 16px;
 }
 
 .basiclist_item .item_info .item_list_homepageicon div:nth-child(2) img {
   margin-left: 7px;
 }
 
-.basiclist_item .item_info .item_list_homepageicon div a {
-  color: #fff;
-}
-
 .basiclist_item .item_info .item_list_homepageicon ul div img {
   margin-left: 8px;
-}
-
-.basiclist_item .item_info .item_list_homepageicon ul li {
-  display: inline-block;
-  margin-right: 19px;
 }
 
 .basiclist_item .item_info .item_list_homepageicon ul li a {
@@ -774,4 +776,8 @@
 }
 .shopping-mall-img-container {
   margin-right: 16px;
+}
+.flexxx {
+  display: flex;
+  align-items: center;
 }
