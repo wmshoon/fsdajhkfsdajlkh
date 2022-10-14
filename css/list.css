@@ -316,6 +316,7 @@
 /*아이템리스트 */
 
 .filter_area {
+  margin-top: 48px;
   margin-left: auto;
   margin-right: auto;
   width: 1166px;
@@ -332,17 +333,6 @@
 .item_list .filter_area > div div {
   display: flex;
   align-items: center;
-}
-
-.item_list .filter_area div span {
-  cursor: pointer;
-  border: 1px solid #aaaaaa;
-  border-radius: 31px;
-  box-sizing: border-box;
-  display: flex;
-  padding: 12px 21px;
-  margin-right: 4px;
-  background-color: #ffffff;
 }
 .item_list img {
   height: 24px;
@@ -404,16 +394,65 @@
   margin-top: 15px;
 }
 
+.number_checkbox:not(:first-child) {
+  margin-left: 8px;
+}
 .number_checkbox {
-  font-size: 16px;
-  font-weight: 700;
   width: 154px;
-  display: flex;
+  height: 45px;
   border-radius: 16px;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  margin-left: 8px;
+  margin-right: 16px;
+}
+
+.category__modify a {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+.category__modify {
+  height: 45px;
+  width: 154px;
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.upload__btn {
+  height: 45px;
+  width: 154px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #04b7cc;
+  font-weight: 700;
+  margin-right: 16px;
+}
+.delete__btn a {
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete__btn {
+  height: 45px;
+  width: 154px;
+  border-radius: 16px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
 
 .number_checkbox input[type="checkbox"] + label {
@@ -421,7 +460,8 @@
   position: relative;
   padding-left: 8px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .number_checkbox input[type="checkbox"] + label:before {
@@ -468,18 +508,6 @@
   height: 135px;
   width: 135px;
 }
-.item_list .filter_area div span {
-  position: relative;
-  border: 0.5px solid #aaaaaa;
-  border-radius: 31px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  padding: 12px 21px;
-  margin-right: 4px;
-  background-color: #ffffff;
-  font-weight: 400;
-}
 
 .item_list .filter_area div span ul {
   padding: 0 15px 20px 20px;
@@ -507,15 +535,8 @@
 .item_list .filter_area div span ul li:hover a {
   color: #04b7cc !important;
 }
-
 .item_list .filter_area div span ul.delete li:hover a {
   color: #ff1a1a !important;
-}
-
-.toggle__btn {
-  position: relative;
-  cursor: pointer;
-  margin-right: 8px;
 }
 .toggle__btn ul {
   padding: 0 15px 20px 20px;
