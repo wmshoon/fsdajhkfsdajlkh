@@ -344,8 +344,6 @@
 }
 
 .item_list .filter_area .item_search {
-  border: 1px solid #04b7cc;
-  padding: 0;
   width: 363px;
   height: 46px;
   background-color: #f7f7f7;
@@ -355,13 +353,21 @@
   align-items: center;
   border-radius: 20px;
 }
+.item_list .filter_area div div span a {
+  color: black;
+}
+.item_list .filter_area div div span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .item_list .filter_area .item_search input {
   border-style: none;
   background-color: transparent;
   outline: 0;
   font-size: 13px;
-  width: 232px;
+  width: 332px;
   height: 31px;
 }
 
@@ -436,7 +442,7 @@
   font-weight: 700;
   margin-right: 16px;
 }
-.delete__btn a {
+.item_list .filter_area > div div .delete__btn a {
   color: black;
   font-weight: 700;
   font-size: 16px;
@@ -444,7 +450,7 @@
   align-items: center;
   justify-content: center;
 }
-.delete__btn {
+.item_list .filter_area > div div .delete__btn {
   height: 45px;
   width: 154px;
   border-radius: 16px;
@@ -454,7 +460,6 @@
   justify-content: center;
   background-color: #fff;
 }
-
 .number_checkbox input[type="checkbox"] + label {
   display: inline-block;
   position: relative;
@@ -637,6 +642,7 @@
 
 .item_list .basiclist_item .item_info .top {
   background-color: #f7f7f7;
+  height: 24px;
   border-radius: 30px;
   width: 800px;
   margin-right: 52px;
