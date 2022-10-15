@@ -820,3 +820,82 @@
   display: flex;
   align-items: center;
 }
+.category_edit {
+  background-color: #fff;
+  width: 718px;
+  height: auto;
+  box-sizing: border-box;
+  padding: 43px 48px 51px 42px;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+.category_edit > p {
+  font-size: 30px;
+  color: #373737;
+  margin-bottom: 34px;
+  font-weight: 200;
+  text-align: left;
+  font-family: Noto Sans;
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+.category_edit > div ul li > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.category_edit > div ul input {
+  background-color: #f7f7f7;
+  border: 0.1px solid #505050;
+  border-radius: 10px;
+  color: #373737;
+  font-size: 14px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 517px;
+  height: 34px;
+  font-weight: 500;
+}
+.category_edit img {
+  height: 24px;
+  width: 24px;
+}
+.confirm_cancel_btn {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.submit_btn {
+  height: 45px;
+  width: 130px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #666666;
+  background-color: #eeeeee;
+  border: none;
+  padding: 0px;
+}
+.cancel_btn {
+  height: 45px;
+  width: 130px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #04b7cc;
+  border: none;
+  padding: 0px;
+  margin-left: 8px;
+}
+.category_edit div ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.category_edit div ul li div p {
+  width: 111px;
+  margin-right: 16px;
+}
