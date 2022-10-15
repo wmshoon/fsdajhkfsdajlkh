@@ -429,95 +429,6 @@
       </div>
     </div>
 
-    <style>
-      .popup__dim {
-        content: "";
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 1000vh;
-        background: rgba(0, 0, 0, 0.7);
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 0.5s ease;
-      }
-
-      .popup__dim.modal {
-        opacity: 1;
-        z-index: 10;
-      }
-
-      .modal > p {
-        font-size: 16px;
-        line-height: 16px;
-        text-align: center;
-        text-decoration-line: underline;
-        color: #ff8897;
-        cursor: pointer;
-      }
-
-      .popup {
-        position: fixed;
-        width: auto;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.5s ease;
-      }
-
-      .opop {
-        z-index: 1 !important;
-      }
-
-      .popup.open {
-        z-index: 11;
-        opacity: 1;
-      }
-
-      .popup__inner {
-        background: #fff;
-      }
-
-      .popup__scroll p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #999999;
-      }
-
-      .popup__scroll {
-        position: relative;
-        height: 276px;
-        overflow-y: scroll;
-      }
-
-      .popup__inner {
-        position: relative;
-      }
-
-      .popup__scroll::-webkit-scrollbar {
-        width: 10px;
-      }
-
-      .popup__close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 30px;
-        cursor: pointer;
-        background: url(./images/x_btn.png) no-repeat;
-        width: 10px;
-        height: 10px;
-      }
-
-      .signup_wrap {
-        transform: none;
-      }
-    </style>
-
     <!-- 팝업 및 팝업 뒷배경 -->
     <div class="popup__dim"></div>
 
@@ -526,187 +437,195 @@
       <div class="popup__inner">
         <div class="popup__close"></div>
         <div class="option_change">
-          <div>
-            <div class="option_price">
-              <p>옵션 가격설정</p>
-              <div class="option_change_detail">
-                <ul>
-                  <li class="delivery_fee">
-                    <span>배송비</span>
-                    <div class="input_wrap">
-                      <input type="text" name="text_custom" class="text_field2" placeholder="" /><span>원 추가하기</span>
-                      <img src="./images/green_check.png" />
-                      <input type="submit" value="적용" class="submit_btn" />
-                    </div>
-                  </li>
-
-                  <li class="option_lowestprice">
-                    <span class="lowest_price">선택옵션 최저가 설정</span>
-                    <div>
-                      <input type="submit" value="적용" class="submit_btn" />
-                    </div>
-                  </li>
-
-                  <li class="option_maximumprice">
-                    <span>선택 옵션 최대가 설정</span>
-                    <input type="submit" value="적용" class="submit_btn" />
-                  </li>
-
-                  <li class="price_reset">
-                    <div class="initialization">
-                      <input type="submit" value="가격 초기화" class="submit_btn" />
-                    </div>
-                  </li>
-                </ul>
+          <div class="item_option_container">
+            <div class="option_price_setting_left">
+              <div class="option_price_setting_upper">
+                <div class="subtitle">옵션 가격 설정</div>
+                <div class="option_price_setting_inner_container">
+                  <div class="option_price_setting_inner_title">배송비</div>
+                  <input type="text" placeholder="10,0000원" />
+                  <div>원 추가하기</div>
+                  <div class="apply">적용</div>
+                </div>
+                <div class="option_price_setting_inner_container">
+                  <div class="option_price_setting_inner_title">선택 옵션 최저가 지정</div>
+                  <div class="apply">적용</div>
+                </div>
+                <div class="option_price_setting_inner_container">
+                  <div class="option_price_setting_inner_title">선택 옵션 최대가 설정</div>
+                  <div class="apply">적용</div>
+                </div>
+                <div class="reset">
+                  <div>가격 초기화</div>
+                  <img src="./images/settings_backup_restore.png" alt="" />
+                </div>
+              </div>
+              <div class="option_price_setting_downner">
+                <div class="subtitle">옵션명 일괄수정</div>
+                <div class="option_price_setting_inner_container">
+                  <div class="option_price_setting_inner_title">글자 변경</div>
+                  <input type="text" placeholder="가나다라마" />
+                  <p>></p>
+                  <input type="text" placeholder="가나다라마" />
+                  <div class="apply">적용</div>
+                </div>
+                <div class="option_price_setting_inner_container">
+                  <div class="option_price_setting_inner_title">커스텀 글자 변경</div>
+                  <div>설정</div>
+                  <p></p>
+                  <div class="apply">적용</div>
+                </div>
+                <div class="option_price_setting_inner_container">
+                  <div class="option_price_setting_inner_title">특수문자 일괄 제거</div>
+                  <div class="apply">적용</div>
+                </div>
+                <div class="option_price_setting_inner_container">
+                  <div class="option_price_setting_inner_title">옵션명 일괄 변경</div>
+                  <div id="bluetext">A~Z 옵션</div>
+                  <p></p>
+                  <div id="bluetext">1~N 옵션</div>
+                </div>
+                <div class="reset">
+                  <div>옵션명 초기화</div>
+                  <img src="./images/settings_backup_restore.png" alt="" />
+                </div>
               </div>
             </div>
-            <div>
-              <p>옵션명 일괄수정</p>
-              <div class="option_change_detail">
-                <ul>
-                  <li class="flex_lrc">
-                    <span>글자 변경</span>
-                    <div>
-                      <input type="text" name="text_custom" class="text_field" placeholder="" />
-                      <img class="option_arrow" src="./images/option_arrow.png" />
-                      <input type="text" name="text_custom" class="text_field" placeholder="" />
-                      <input type="submit" value="적용" class="submit_btn" />
-                    </div>
-                  </li>
-
-                  <li>
-                    <span>커스텀 글자 변경</span>
-                    <div>
-                      <input type="submit" value="설정" class="customtext__modify submit_btn" />
-                      <input type="submit" value="적용" class="submit_btn" />
-                    </div>
-                  </li>
-
-                  <li class="flex_lrc">
-                    <span>특수문자 일괄제거</span>
-                    <input type="submit" value="적용" class="submit_btn" />
-                  </li>
-
-                  <li>
-                    <div class="initialization2">
-                      <input type="submit" value="A ~ Z 옵션" class="submit_btn" />
-                      <input type="submit" value="1 ~ N번 옵션" class="submit_btn" />
-                      <input type="submit" value="옵션명초기화" class="submit_btn" />
-                    </div>
-                  </li>
-                </ul>
+            <div class="option_price_setting_right">
+              <div class="option-price-top-container">
+                <input type="checkbox" name="" id="selectAll" />
+                <label class="selectAll" for="selectAll">전체선택</label>
+                <div>이미지</div>
+                <div>옵션가격/옵션명</div>
               </div>
-            </div>
-          </div>
-
-          <div class="select_option">
-            <div>
-              <ul>
-                <form class="number_checkbox">
-                  <input id="all" type="checkbox" />
-                  <label for="all">
-                    <span>전체선택</span>
-                  </label>
-                </form>
-                <li class="img">이미지</li>
-                <li class="option_price">옵션가격</li>
-                <li class="option_name">옵션명</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="main_content">
-            <div>
-              <ul>
-                <li>
-                  <form class="number_checkbox">
-                    <input id="agree_1" type="checkbox" />
-                    <label for="agree_1"> </label>
-                  </form>
-                  <span>1.</span>
-                  <img src="./images/option_img.png" />
-                  <div>
-                    <span>¥188.1</span>
-                    <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <div class="item-comtainer">
+                <div class="item-container-inner">
+                  <div class="item-container-left">
+                    <input type="checkbox" name="" id="" />
+                    <div class="nth_of_item">1</div>
+                    <img src="./images/sample_item.png" alt="" />
                   </div>
-                  <input type="text" name="text_custom" class="text_field" placeholder="" />
-                </li>
-
-                <li>
-                  <form class="number_checkbox">
-                    <input id="agree_2" type="checkbox" />
-                    <label for="agree_2"> </label>
-                  </form>
-                  <span>2.</span>
-                  <img src="./images/option_img.png" />
-                  <div>
-                    <span>¥188.1</span>
-                    <input type="text" name="text_custom" class="text_field" placeholder="" />
+                  <div class="item-container-right">
+                    <div class="item-container-right-first-element">
+                      <p>¥188.1</p>
+                      <input type="text" placeholder="30,000" />
+                    </div>
+                    <input type="text" placeholder="A옵션" />
                   </div>
-                  <input type="text" name="text_custom" class="text_field" placeholder="" />
-                </li>
-
-                <li>
-                  <form class="number_checkbox">
-                    <input id="agree_3" type="checkbox" />
-                    <label for="agree_3"> </label>
-                  </form>
-                  <span>3.</span>
-                  <img src="./images/option_img.png" />
-                  <div>
-                    <span>¥188.1</span>
-                    <input type="text" name="text_custom" class="text_field" placeholder="" />
+                </div>
+                <div class="item-container-inner">
+                  <div class="item-container-left">
+                    <input type="checkbox" name="" id="" />
+                    <div class="nth_of_item">1</div>
+                    <img src="./images/sample_item.png" alt="" />
                   </div>
-                  <input type="text" name="text_custom" class="text_field" placeholder="" />
-                </li>
-
-                <li class="error">
-                  <form class="number_checkbox">
-                    <input id="agree_4" type="checkbox" />
-                    <label for="agree_4"> </label>
-                  </form>
-                  <span>4.</span>
-                  <img src="./images/option_img.png" />
-
-                  <div>
-                    <span>¥188.1</span>
-                    <input type="text" name="text_custom" class="text_field" placeholder="" />
+                  <div class="item-container-right">
+                    <div class="item-container-right-first-element">
+                      <p>¥188.1</p>
+                      <input type="text" placeholder="30,000" />
+                    </div>
+                    <input type="text" placeholder="A옵션" />
                   </div>
-
-                  <div class="text_error">
-                    <input type="text" name="text_custom" class="text_field" placeholder="" />
-                    <span>옵션명 글자 초과</span>
+                </div>
+                <div class="item-container-inner">
+                  <div class="item-container-left">
+                    <input type="checkbox" name="" id="" />
+                    <div class="nth_of_item">1</div>
+                    <img src="./images/sample_item.png" alt="" />
                   </div>
-                </li>
-
-                <li>
-                  <form class="number_checkbox">
-                    <input id="agree_5" type="checkbox" />
-                    <label for="agree_5"> </label>
-                  </form>
-                  <span>5.</span>
-                  <img src="./images/option_img.png" />
-                  <div>
-                    <span>¥188.1</span>
-                    <input type="text" name="text_custom" class="text_field" placeholder="" />
+                  <div class="item-container-right">
+                    <div class="item-container-right-first-element">
+                      <p>¥188.1</p>
+                      <input type="text" placeholder="30,000" />
+                    </div>
+                    <input type="text" placeholder="A옵션" />
                   </div>
-                  <input type="text" name="text_custom" class="text_field" placeholder="" />
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="option_btn">
-            <div>
-              <div class="option_check">
-                <form class="number_checkbox">
-                  <input id="agree_6" type="checkbox" />
-                  <label for="agree_6"> 상세페이지 옵션이미지 적용 </label>
-                </form>
+                </div>
+                <div class="item-container-inner">
+                  <div class="item-container-left">
+                    <input type="checkbox" name="" id="" />
+                    <div class="nth_of_item">1</div>
+                    <img src="./images/sample_item.png" alt="" />
+                  </div>
+                  <div class="item-container-right">
+                    <div class="item-container-right-first-element">
+                      <p>¥188.1</p>
+                      <input type="text" placeholder="30,000" />
+                    </div>
+                    <input type="text" placeholder="A옵션" />
+                  </div>
+                </div>
+                <div class="item-container-inner">
+                  <div class="item-container-left">
+                    <input type="checkbox" name="" id="" />
+                    <div class="nth_of_item">1</div>
+                    <img src="./images/sample_item.png" alt="" />
+                  </div>
+                  <div class="item-container-right">
+                    <div class="item-container-right-first-element">
+                      <p>¥188.1</p>
+                      <input type="text" placeholder="30,000" />
+                    </div>
+                    <input type="text" placeholder="A옵션" />
+                  </div>
+                </div>
+                <div class="item-container-inner">
+                  <div class="item-container-left">
+                    <input type="checkbox" name="" id="" />
+                    <div class="nth_of_item">1</div>
+                    <img src="./images/sample_item.png" alt="" />
+                  </div>
+                  <div class="item-container-right">
+                    <div class="item-container-right-first-element">
+                      <p>¥188.1</p>
+                      <input type="text" placeholder="30,000" />
+                    </div>
+                    <input type="text" placeholder="A옵션" />
+                  </div>
+                </div>
+                <div class="item-container-inner">
+                  <div class="item-container-left">
+                    <input type="checkbox" name="" id="" />
+                    <div class="nth_of_item">1</div>
+                    <img src="./images/sample_item.png" alt="" />
+                  </div>
+                  <div class="item-container-right">
+                    <div class="item-container-right-first-element">
+                      <p>¥188.1</p>
+                      <input type="text" placeholder="30,000" />
+                    </div>
+                    <input type="text" placeholder="A옵션" />
+                  </div>
+                </div>
+                <div class="item-container-inner">
+                  <div class="item-container-left">
+                    <input type="checkbox" name="" id="" />
+                    <div class="nth_of_item">1</div>
+                    <img src="./images/sample_item.png" alt="" />
+                  </div>
+                  <div class="item-container-right">
+                    <div class="item-container-right-first-element">
+                      <p>¥188.1</p>
+                      <input type="text" placeholder="30,000" />
+                    </div>
+                    <input type="text" placeholder="A옵션" />
+                  </div>
+                </div>
               </div>
-              <div class="confirm_cancel_btn">
-                <input type="submit" value="확인" class="submit_btn" />
-                <input type="submit" value="취소" class="cancel_btn" />
+
+              <div>
+                <div>
+                  <button>번역 전</button>
+                  <button>번역 후</button>
+                  <div>
+                    <input type="checkbox" name="" id="" />
+                    <p>상세페이지 옵션이미지 적용</p>
+                  </div>
+                </div>
+                <div class="confirm_cancel_btn">
+                  <input type="submit" value="취소" class="cancel_btn" />
+                  <input type="submit" value="저장" class="submit_btn" />
+                </div>
               </div>
             </div>
           </div>
@@ -824,8 +743,8 @@
           </div>
 
           <div class="confirm_cancel_btn">
-            <input type="submit" value="취소" class="submit_btn" />
-            <input type="submit" value="저장" class="cancel_btn" />
+            <input type="submit" value="취소" class="cancel_btn" />
+            <input type="submit" value="확인" class="submit_btn" />
           </div>
         </div>
       </div>
@@ -836,49 +755,7 @@
     <div class="popup popup4">
       <div class="popup__inner">
         <div class="popup__close"></div>
-
-        <div class="mainpage_edit">
-          <p>메인사진 수정</p>
-          <div class="detailpage_menubar">
-            <ul>
-              <li>
-                <div class="img_upload"><img src="./images/img_upload.png" /> <span>이미지업로드</span></div>
-                <div class="preview">
-                  <span>미리보기</span>
-                </div>
-              </li>
-              <li>
-                <div class="delete">삭제</div>
-                <div class="representative_img">대표이미지 설정</div>
-                <div class="img_apply">수정한 이미지 적용</div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="mainpage_edit_content">
-            <div>
-              <ul>
-                <li class="active">
-                  <img src="./images/editoer_sample1.jpg" alt="" />
-                </li>
-                <li>
-                  <img src="./images/editoer_sample1.jpg" alt="" />
-                </li>
-                <li>
-                  <img src="./images/editoer_sample1.jpg" alt="" />
-                </li>
-                <li>
-                  <img src="./images/editoer_sample1.jpg" alt="" />
-                </li>
-              </ul>
-            </div>
-            <iframe style="width: 100%; height: 800px" src="http://0.0.0.0:8080/example01-includeUi.html" frameborder="0"></iframe>
-          </div>
-
-          <div class="save_btn">
-            <input type="submit" value="저장" class="submit_btn" />
-          </div>
-        </div>
+        weeee
       </div>
     </div>
     <!-- 메인 페이지 수정 -->
