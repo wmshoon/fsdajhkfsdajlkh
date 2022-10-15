@@ -352,8 +352,10 @@
   box-sizing: border-box;
   align-items: center;
   border-radius: 20px;
+  margin-left: 24px;
 }
 .item_list .filter_area div div span a {
+  margin-left: 24px;
   color: black;
 }
 .item_list .filter_area div div span {
