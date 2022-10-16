@@ -13,14 +13,14 @@ a {
   /* height: 1080px;
   width: 1920px; */
   min-width: 1920px;
-  min-height: 1080px;
+  min-height: 720px;
   max-width: 100vw;
   min-height: 100vh;
 }
 /* side bar */
 .side-bar {
   width: 220px;
-  min-height: 1060px;
+  min-height: 700px;
   max-height: 100vh;
   padding-left: 30px;
   display: flex;
