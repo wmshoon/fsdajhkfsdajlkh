@@ -1056,6 +1056,7 @@
 
 .popup__inner {
   background: #fff;
+  border-radius: 16px;
 }
 
 .popup__scroll p {
@@ -1103,6 +1104,7 @@
   padding: 34px 24px 54px 32px;
   width: 403px;
   background-color: #f7f7f7;
+  border-radius: 16px;
 }
 .option_price_setting_right {
   padding: 24px 32px 24px 24px;
@@ -1335,4 +1337,11 @@ div.popup:nth-child(6) > div:nth-child(1) > iframe:nth-child(2) {
 }
 .custom_text_change > div:nth-child(3) {
   margin-top: 0px;
+}
+.option_change {
+  display: flex;
+  background-color: #fff;
+  width: 1380px;
+  height: 832px;
+  border-radius: 16px;
 }
