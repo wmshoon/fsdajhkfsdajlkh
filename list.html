@@ -1,97 +1,201 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=1600" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="x-rim-auto-match" content="none" />
-    <link rel="shortcut icon" href="./images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./css/common.css" />
-    <link rel="stylesheet" type="text/css" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/list.css" />
-    <title>DINO</title>
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/main.js"></script>
-  </head>
 
-  <body>
-    <div class="main-container">
-      <div class="side-bar">
-        <img id="logo" src="./images/DINO.png" alt="" />
-        <a class="home" href="./home.html"><img src="./images/home_unactivate.png" alt="" />Home</a>
-        <a class="collection" href="./collection.html"><img src="./images/collect_item_unactivate.png" alt="" />상품수집</a>
-        <a class="list" href="./list.html"><img src="./images/products_list_activate.png" alt="" />상품리스트</a>
-        <a class="mypage" href="./mypage.html"><img src="./images/mypage_unactivate.png" />마이페이지</a>
-        <a class="API" href="./API.html"><img src="./images/API_setting_unactivate.png" alt="" />API 설정</a>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=1600" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="x-rim-auto-match" content="none" />
+  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="./css/common.css" />
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/list.css" />
+  <title>DINO</title>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="side-bar">
+      <img id="logo" src="./images/DINO.png" alt="" />
+      <a class="home" href="./home.html"><img src="./images/home_unactivate.png" alt="" />Home</a>
+      <a class="collection" href="./collection.html"><img src="./images/collect_item_unactivate.png" alt="" />상품수집</a>
+      <a class="list" href="./list.html"><img src="./images/products_list_activate.png" alt="" />상품리스트</a>
+      <a class="mypage" href="./mypage.html"><img src="./images/mypage_unactivate.png" />마이페이지</a>
+      <a class="API" href="./API.html"><img src="./images/API_setting_unactivate.png" alt="" />API 설정</a>
+    </div>
+    <div class="main-content-container">
+      <div class="top-naneline">
+        <div class="currentPage">
+          <img src="./images/top_line_home.png" alt="" />
+          <p>Item List</p>
+        </div>
+        <div class="profile">
+          <p></p>
+          <img src="./images/profile.png" alt="" />
+          <a id="username" href="#ex1" rel="modal:open">곽준호</a>
+        </div>
       </div>
-      <div class="main-content-container">
-        <div class="top-naneline">
-          <div class="currentPage">
-            <img src="./images/top_line_home.png" alt="" />
-            <p>Item List</p>
-          </div>
-          <div class="profile">
-            <p></p>
-            <img src="./images/profile.png" alt="" />
-            <a id="username" href="#ex1" rel="modal:open">곽준호</a>
+      <div class="item_list">
+        <div class="filter_area">
+          <div>
+            <div>
+              <form class="number_checkbox">
+                <input id="Allcheck" type="checkbox" />
+                <label for="Allcheck"> 전체선택 </label>
+              </form>
+              <span class="category__modify"><a href="#">카테고리 수정</a></span>
+              <span class="upload__btn toggle__btn">
+                업로드
+                <img src="./images/upload_downed.png" />
+                <ul class="upload">
+                  <li>
+                    <a href="#">전체마켓 상품 업로드</a>
+                  </li>
+                  <li>
+                    <a href="#">스마트스토어 상품 업로드</a>
+                  </li>
+                  <li>
+                    <a href="#">11번가 상품 업로드</a>
+                  </li>
+                  <li>
+                    <a href="#">Gmarket 상품 업로드</a>
+                  </li>
+                  <li>
+                    <a href="#">Auction 상품 업로드</a>
+                  </li>
+                  <li>
+                    <a href="#">쿠팡 상품 업로드</a>
+                  </li>
+                  <li>
+                    <a href="#">롯데온 상품 업로드</a>
+                  </li>
+                  <li>
+                    <a href="#">위메프 상품 업로드</a>
+                  </li>
+                  <li>
+                    <a href="#">티몬 상품 업로드</a>
+                  </li>
+                </ul>
+              </span>
+              <span class="delete__btn toggle__btn">
+                <a href="#"> 선택삭제<img src="./images/down_black.png" /> </a>
+                <ul class="delete">
+                  <li>
+                    <a href="#">전체마켓 삭제</a>
+                  </li>
+                  <li>
+                    <a href="#">스마트스토어 상품 삭제</a>
+                  </li>
+                  <li>
+                    <a href="#">11번가 상품 삭제</a>
+                  </li>
+                  <li>
+                    <a href="#">Gmarket 상품 삭제</a>
+                  </li>
+                  <li>
+                    <a href="#">Auction 상품 삭제</a>
+                  </li>
+                  <li>
+                    <a href="#">쿠팡 상품 삭제</a>
+                  </li>
+                  <li>
+                    <a href="#">롯데온 상품 삭제</a>
+                  </li>
+                  <li>
+                    <a href="#">위메프 상품 삭제</a>
+                  </li>
+                  <li>
+                    <a href="#">티몬 상품 삭제</a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+            <div>
+              <form class="item_search">
+                <input type="search" name="q" />
+                <button class="search_btn" type="submit" title="검색">
+                  <a href="#"><img src="./images/search_icon.png" /></a>
+                </button>
+              </form>
+              <span Class="show-once-at-five"><a href="#">5개씩 보기</a><img src="./images/down_black.png" /></span>
+            </div>
           </div>
         </div>
-        <div class="item_list">
-          <div class="filter_area">
+        <div class="">
+          <div class="basiclist_item">
             <div>
-              <div>
-                <form class="number_checkbox">
-                  <input id="Allcheck" type="checkbox" />
-                  <label for="Allcheck"> 전체선택 </label>
-                </form>
-                <span class="category__modify"><a href="#">카테고리 수정</a></span>
-                <span class="upload__btn toggle__btn">
-                  업로드
-                  <img src="./images/upload_downed.png" />
-                  <ul class="upload">
+              <form class="number_checkbox">
+                <input id="agree_1" type="checkbox" name="item" />
+                <label for="agree_1">
+                  <span>No. 216851368413</span>
+                </label>
+              </form>
+              <div class="item_thumbnail">
+                <img src="./images/mbp.png" />
+              </div>
+            </div>
+            <div class="item_info">
+              <div class="top-container">
+                <div class="top">
+                  <ul>
                     <li>
-                      <a href="#">전체마켓 상품 업로드</a>
-                    </li>
-                    <li>
-                      <a href="#">스마트스토어 상품 업로드</a>
-                    </li>
-                    <li>
-                      <a href="#">11번가 상품 업로드</a>
-                    </li>
-                    <li>
-                      <a href="#">Gmarket 상품 업로드</a>
-                    </li>
-                    <li>
-                      <a href="#">Auction 상품 업로드</a>
-                    </li>
-                    <li>
-                      <a href="#">쿠팡 상품 업로드</a>
-                    </li>
-                    <li>
-                      <a href="#">롯데온 상품 업로드</a>
-                    </li>
-                    <li>
-                      <a href="#">위메프 상품 업로드</a>
-                    </li>
-                    <li>
-                      <a href="#">티몬 상품 업로드</a>
+                      <span class="title">디지털·가전 > 노트북액세서리 > 노트북받침대·쿨러</span>
+                      <div class="shopping-mall-img-container">
+                        <a href="#"><img id="never" src="./images/never_activate.png" /></a>
+                        <a href="#"><img id="tenonest" src="./images/11st_activate.png" /></a>
+                        <a href="#"><img id="gmarket" src="./images/gmarket_activate.png" /></a>
+                        <a href="#"><img id="action" src="./images/action_activate.png" /></a>
+                        <a href="#"><img id="coupang" src="./images/coupang_activate.png" /></a>
+                        <a href="#"><img id="lotteOn" src="./images/lotteOn_activate.png" /></a>
+                        <a href="#"><img id="wmp" src="./images/wmp_activate.png" /></a>
+                      </div>
                     </li>
                   </ul>
-                </span>
-                <span class="delete__btn toggle__btn">
-                  <a href="#"> 선택삭제<img src="./images/down_black.png" /> </a>
-                  <ul class="delete">
+                </div>
+                <div class="moving__btn toggle__btn">
+                  <img src="./images/link_move.png" />
+                  <ul class="moving">
                     <li>
-                      <a href="#">전체마켓 삭제</a>
+                      <a href="#"> 타오바오 링크이동</a>
                     </li>
+                    <li>
+                      <a href="#">스마트스토어 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">11번가 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">Gmarket 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">Auction 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">쿠팡 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">롯데온 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">위메프 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">티몬 링크이동</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="delete__btn toggle__btn">
+                  <img src="./images/delete.png" />
+
+                  <ul class="moving delete">
                     <li>
                       <a href="#">스마트스토어 상품 삭제</a>
-                    </li>
-                    <li>
-                      <a href="#">11번가 상품 삭제</a>
                     </li>
                     <li>
                       <a href="#">Gmarket 상품 삭제</a>
@@ -112,863 +216,761 @@
                       <a href="#">티몬 상품 삭제</a>
                     </li>
                   </ul>
-                </span>
-              </div>
-              <div>
-                <form class="item_search">
-                  <input type="search" name="q" />
-                  <button class="search_btn" type="submit" title="검색">
-                    <a href="#"><img src="./images/search_icon.png" /></a>
-                  </button>
-                </form>
-                <span Class="show-once-at-five"><a href="#">5개씩 보기</a><img src="./images/down_black.png" /></span>
-              </div>
-            </div>
-          </div>
-          <div class="">
-            <div class="basiclist_item">
-              <div>
-                <form class="number_checkbox">
-                  <input id="agree_1" type="checkbox" name="item" />
-                  <label for="agree_1">
-                    <span>No. 216851368413</span>
-                  </label>
-                </form>
-                <div class="item_thumbnail">
-                  <img src="./images/mbp.png" />
                 </div>
               </div>
-              <div class="item_info">
-                <div class="top-container">
-                  <div class="top">
+              <div class="item-inner-title">
+                <div class="yellow-box"></div>
+                <div>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</div>
+              </div>
+              <div class="item-inner-edit-title">
+                <p>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</p>
+                <span>45 / 50 Bytes</span>
+              </div>
+              <div class="flexxx">
+                <li class="adjustment">
+                  <span class="option__modify"><a href="#">상품 옵션 수정</a><img src="./images/done.png" /></span>
+                  <span class="detail__modify"><a href="#">상세페이지 수정</a><img src="./images/done.png" /></span>
+                  <span class="fontcolor_gold">배송비 120,000원</span>
+                </li>
+                <div class="item_list_homepageicon">
+                  <div>
                     <ul>
-                      <li>
-                        <span class="title">디지털·가전 > 노트북액세서리 > 노트북받침대·쿨러</span>
-                        <div class="shopping-mall-img-container">
-                          <a href="#"><img id="never" src="./images/never_activate.png" /></a>
-                          <a href="#"><img id="tenonest" src="./images/11st_activate.png" /></a>
-                          <a href="#"><img id="gmarket" src="./images/gmarket_activate.png" /></a>
-                          <a href="#"><img id="action" src="./images/action_activate.png" /></a>
-                          <a href="#"><img id="coupang" src="./images/coupang_activate.png" /></a>
-                          <a href="#"><img id="lotteOn" src="./images/lotteOn_activate.png" /></a>
-                          <a href="#"><img id="wmp" src="./images/wmp_activate.png" /></a>
-                        </div>
-                      </li>
+                      <li><img src="./images/never.png" /></li>
+                      <li><img src="./images/11st.png" /></li>
+                      <li><img src="./images/gmarket.png" /></li>
+                      <li><img src="./images/action.png" /></li>
+                      <li><img src="./images/coupang.png" /></li>
+                      <li><img src="./images/lotteOn.png" /></li>
+                      <li><img src="./images/Wemakep.png" /></li>
                     </ul>
                   </div>
-                  <div class="moving__btn toggle__btn">
-                    <img src="./images/link_move.png" />
-                    <ul class="moving">
-                      <li>
-                        <a href="#"> 타오바오 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">스마트스토어 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">11번가 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">Gmarket 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">Auction 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">쿠팡 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">롯데온 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">위메프 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">티몬 링크이동</a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="delete__btn toggle__btn">
-                    <img src="./images/delete.png" />
-
-                    <ul class="moving delete">
-                      <li>
-                        <a href="#">스마트스토어 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">Gmarket 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">Auction 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">쿠팡 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">롯데온 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">위메프 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">티몬 상품 삭제</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="item-inner-title">
-                  <div class="yellow-box"></div>
-                  <div>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</div>
-                </div>
-                <div class="item-inner-edit-title">
-                  <p>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</p>
-                  <span>45 / 50 Bytes</span>
-                </div>
-                <div class="flexxx">
-                  <li class="adjustment">
-                    <span class="option__modify"><a href="#">상품 옵션 수정</a><img src="./images/done.png" /></span>
-                    <span class="detail__modify"><a href="#">상세페이지 수정</a><img src="./images/done.png" /></span>
-                    <span class="fontcolor_gold">배송비 120,000원</span>
-                  </li>
-                  <div class="item_list_homepageicon">
-                    <div>
-                      <ul>
-                        <li><img src="./images/never.png" /></li>
-                        <li><img src="./images/11st.png" /></li>
-                        <li><img src="./images/gmarket.png" /></li>
-                        <li><img src="./images/action.png" /></li>
-                        <li><img src="./images/coupang.png" /></li>
-                        <li><img src="./images/lotteOn.png" /></li>
-                        <li><img src="./images/Wemakep.png" /></li>
+                  <div class="uplaod_btn">
+                    <div class="hover__btn">
+                      업로드
+                      <ul class="upaload">
+                        <li>
+                          <a href="#">스마트스토어 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">Gmarket 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">Auction 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">쿠팡 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">롯데온 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">위메프 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">티몬 상품 업로드</a>
+                        </li>
                       </ul>
                     </div>
-                    <div class="uplaod_btn">
-                      <div class="hover__btn">
-                        업로드
-                        <ul class="upaload">
-                          <li>
-                            <a href="#">스마트스토어 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">Gmarket 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">Auction 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">쿠팡 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">롯데온 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">위메프 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">티몬 상품 업로드</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="basiclist_item">
-              <div>
-                <form class="number_checkbox">
-                  <input id="agree_2" type="checkbox" name="item" />
-                  <label for="agree_2">
-                    <span>No. 216851368413</span>
-                  </label>
-                </form>
-                <div class="item_thumbnail">
-                  <img src="./images/mbp.png" />
-                </div>
-              </div>
-              <div class="item_info">
-                <div class="top-container">
-                  <div class="top">
-                    <ul>
-                      <li>
-                        <span class="no_category">카테고리 없음</span>
-                        <div class="shopping-mall-img-container">
-                          <a href="#"><img id="never" src="./images/never_unactivate.png" /></a>
-                          <a href="#"><img id="tenonest" src="./images/11st_unactivate.png" /></a>
-                          <a href="#"><img id="gmarket" src="./images/gmarket_unactivate.png" /></a>
-                          <a href="#"><img id="action" src="./images/action_unactivate.png" /></a>
-                          <a href="#"><img id="coupang" src="./images/coupang_unactivate.png" /></a>
-                          <a href="#"><img id="lotteOn" src="./images/lotteOn_unactivate.png" /></a>
-                          <a href="#"><img id="wmp" src="./images/wmp_unactivate.png" /></a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="moving__btn toggle__btn">
-                    <img src="./images/link_move.png" />
-                    <ul class="moving">
-                      <li>
-                        <a href="#"> 타오바오 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">스마트스토어 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">11번가 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">Gmarket 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">Auction 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">쿠팡 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">롯데온 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">위메프 링크이동</a>
-                      </li>
-                      <li>
-                        <a href="#">티몬 링크이동</a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="delete__btn toggle__btn">
-                    <img src="./images/delete.png" />
-
-                    <ul class="moving delete">
-                      <li>
-                        <a href="#">스마트스토어 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">Gmarket 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">Auction 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">쿠팡 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">롯데온 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">위메프 상품 삭제</a>
-                      </li>
-                      <li>
-                        <a href="#">티몬 상품 삭제</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="item-inner-title">
-                  <div class="yellow-box"></div>
-                  <div>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</div>
-                </div>
-                <div class="item-inner-edit-title">
-                  <p>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</p>
-                  <span>45 / 50 Bytes</span>
-                </div>
-                <div class="flexxx">
-                  <li class="adjustment">
-                    <span class="option__modify"><a href="#">상품 옵션 수정</a><img src="./images/done.png" /></span>
-                    <span class="detail__modify"><a href="#">상세페이지 수정</a><img src="./images/done.png" /></span>
-                    <span class="fontcolor_gold">배송비 120,000원</span>
-                  </li>
-                  <div class="item_list_homepageicon">
-                    <div>
-                      <ul>
-                        <li><img src="./images/never.png" /></li>
-                        <li><img src="./images/11st.png" /></li>
-                        <li><img src="./images/gmarket.png" /></li>
-                        <li><img src="./images/action.png" /></li>
-                        <li><img src="./images/coupang.png" /></li>
-                        <li><img src="./images/lotteOn.png" /></li>
-                        <li><img src="./images/Wemakep.png" /></li>
-                      </ul>
-                    </div>
-                    <div class="uplaod_btn">
-                      <div class="hover__btn">
-                        업로드
-                        <ul class="upaload">
-                          <li>
-                            <a href="#">스마트스토어 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">Gmarket 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">Auction 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">쿠팡 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">롯데온 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">위메프 상품 업로드</a>
-                          </li>
-                          <li>
-                            <a href="#">티몬 상품 업로드</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 팝업 및 팝업 뒷배경 -->
-    <div class="popup__dim"></div>
-
-    <!-- 상세 옵션 수정 -->
-    <div class="popup popup1">
-      <div class="popup__inner">
-        <div class="popup__close"></div>
-        <div class="option_change">
-          <div class="option_price_setting_left">
-            <div class="option_price_setting_upper">
-              <div class="subtitle">옵션 가격 설정</div>
-              <div class="option_price_setting_inner_container">
-                <div class="option_price_setting_inner_title">배송비</div>
-                <input type="text" placeholder="10,0000원" />
-                <div>원 추가하기</div>
-                <div class="apply">적용</div>
-              </div>
-              <div class="option_price_setting_inner_container">
-                <div class="option_price_setting_inner_title">선택 옵션 최저가 지정</div>
-                <div class="apply">적용</div>
-              </div>
-              <div class="option_price_setting_inner_container">
-                <div class="option_price_setting_inner_title">선택 옵션 최대가 설정</div>
-                <div class="apply">적용</div>
-              </div>
-              <div class="reset">
-                <div>가격 초기화</div>
-                <img src="./images/settings_backup_restore.png" alt="" />
-              </div>
-            </div>
-            <div class="option_price_setting_downner">
-              <div class="subtitle">옵션명 일괄수정</div>
-              <div class="option_price_setting_inner_container">
-                <div class="option_price_setting_inner_title">글자 변경</div>
-                <input type="text" placeholder="가나다라마" />
-                <p>></p>
-                <input type="text" placeholder="가나다라마" />
-                <div class="apply">적용</div>
-              </div>
-              <div class="option_price_setting_inner_container">
-                <div class="option_price_setting_inner_title">커스텀 글자 변경</div>
-                <div class="customtext__modify">설정</div>
-                <p></p>
-                <div class="apply">적용</div>
-              </div>
-              <div class="option_price_setting_inner_container">
-                <div class="option_price_setting_inner_title">특수문자 일괄 제거</div>
-                <div class="apply">적용</div>
-              </div>
-              <div class="option_price_setting_inner_container">
-                <div class="option_price_setting_inner_title">옵션명 일괄 변경</div>
-                <div id="bluetext">A~Z 옵션</div>
-                <p></p>
-                <div id="bluetext">1~N 옵션</div>
-              </div>
-              <div class="reset">
-                <div>옵션명 초기화</div>
-                <img src="./images/settings_backup_restore.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="option_price_setting_right">
-            <div class="option-price-top-container">
-              <input type="checkbox" name="" id="selectAll" />
-              <label class="selectAll" for="selectAll">전체선택</label>
-              <div>이미지</div>
-              <div>옵션가격/옵션명</div>
-            </div>
-            <div class="item-comtainer">
-              <div class="item-container-inner">
-                <div class="item-container-left">
-                  <input type="checkbox" name="" id="" />
-                  <div class="nth_of_item">1</div>
-                  <img src="./images/sample_item.png" alt="" />
-                </div>
-                <div class="item-container-right">
-                  <div class="item-container-right-first-element">
-                    <p>¥188.1</p>
-                    <input type="text" placeholder="30,000" />
-                  </div>
-                  <input type="text" placeholder="A옵션" />
-                </div>
-              </div>
-              <div class="item-container-inner">
-                <div class="item-container-left">
-                  <input type="checkbox" name="" id="" />
-                  <div class="nth_of_item">1</div>
-                  <img src="./images/sample_item.png" alt="" />
-                </div>
-                <div class="item-container-right">
-                  <div class="item-container-right-first-element">
-                    <p>¥188.1</p>
-                    <input type="text" placeholder="30,000" />
-                  </div>
-                  <input type="text" placeholder="A옵션" />
-                </div>
-              </div>
-              <div class="item-container-inner">
-                <div class="item-container-left">
-                  <input type="checkbox" name="" id="" />
-                  <div class="nth_of_item">1</div>
-                  <img src="./images/sample_item.png" alt="" />
-                </div>
-                <div class="item-container-right">
-                  <div class="item-container-right-first-element">
-                    <p>¥188.1</p>
-                    <input type="text" placeholder="30,000" />
-                  </div>
-                  <input type="text" placeholder="A옵션" />
-                </div>
-              </div>
-              <div class="item-container-inner">
-                <div class="item-container-left">
-                  <input type="checkbox" name="" id="" />
-                  <div class="nth_of_item">1</div>
-                  <img src="./images/sample_item.png" alt="" />
-                </div>
-                <div class="item-container-right">
-                  <div class="item-container-right-first-element">
-                    <p>¥188.1</p>
-                    <input type="text" placeholder="30,000" />
-                  </div>
-                  <input type="text" placeholder="A옵션" />
-                </div>
-              </div>
-              <div class="item-container-inner">
-                <div class="item-container-left">
-                  <input type="checkbox" name="" id="" />
-                  <div class="nth_of_item">1</div>
-                  <img src="./images/sample_item.png" alt="" />
-                </div>
-                <div class="item-container-right">
-                  <div class="item-container-right-first-element">
-                    <p>¥188.1</p>
-                    <input type="text" placeholder="30,000" />
-                  </div>
-                  <input type="text" placeholder="A옵션" />
-                </div>
-              </div>
-              <div class="item-container-inner">
-                <div class="item-container-left">
-                  <input type="checkbox" name="" id="" />
-                  <div class="nth_of_item">1</div>
-                  <img src="./images/sample_item.png" alt="" />
-                </div>
-                <div class="item-container-right">
-                  <div class="item-container-right-first-element">
-                    <p>¥188.1</p>
-                    <input type="text" placeholder="30,000" />
-                  </div>
-                  <input type="text" placeholder="A옵션" />
-                </div>
-              </div>
-              <div class="item-container-inner">
-                <div class="item-container-left">
-                  <input type="checkbox" name="" id="" />
-                  <div class="nth_of_item">1</div>
-                  <img src="./images/sample_item.png" alt="" />
-                </div>
-                <div class="item-container-right">
-                  <div class="item-container-right-first-element">
-                    <p>¥188.1</p>
-                    <input type="text" placeholder="30,000" />
-                  </div>
-                  <input type="text" placeholder="A옵션" />
-                </div>
-              </div>
-              <div class="item-container-inner">
-                <div class="item-container-left">
-                  <input type="checkbox" name="" id="" />
-                  <div class="nth_of_item">1</div>
-                  <img src="./images/sample_item.png" alt="" />
-                </div>
-                <div class="item-container-right">
-                  <div class="item-container-right-first-element">
-                    <p>¥188.1</p>
-                    <input type="text" placeholder="30,000" />
-                  </div>
-                  <input type="text" placeholder="A옵션" />
-                </div>
-              </div>
-            </div>
-
+          <div class="basiclist_item">
             <div>
-              <div>
-                <button>번역 전</button>
-                <button>번역 후</button>
-                <div>
-                  <input type="checkbox" name="" id="" />
-                  <p>상세페이지 옵션이미지 적용</p>
+              <form class="number_checkbox">
+                <input id="agree_2" type="checkbox" name="item" />
+                <label for="agree_2">
+                  <span>No. 216851368413</span>
+                </label>
+              </form>
+              <div class="item_thumbnail">
+                <img src="./images/mbp.png" />
+              </div>
+            </div>
+            <div class="item_info">
+              <div class="top-container">
+                <div class="top">
+                  <ul>
+                    <li>
+                      <span class="no_category">카테고리 없음</span>
+                      <div class="shopping-mall-img-container">
+                        <a href="#"><img id="never" src="./images/never_unactivate.png" /></a>
+                        <a href="#"><img id="tenonest" src="./images/11st_unactivate.png" /></a>
+                        <a href="#"><img id="gmarket" src="./images/gmarket_unactivate.png" /></a>
+                        <a href="#"><img id="action" src="./images/action_unactivate.png" /></a>
+                        <a href="#"><img id="coupang" src="./images/coupang_unactivate.png" /></a>
+                        <a href="#"><img id="lotteOn" src="./images/lotteOn_unactivate.png" /></a>
+                        <a href="#"><img id="wmp" src="./images/wmp_unactivate.png" /></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="moving__btn toggle__btn">
+                  <img src="./images/link_move.png" />
+                  <ul class="moving">
+                    <li>
+                      <a href="#"> 타오바오 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">스마트스토어 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">11번가 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">Gmarket 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">Auction 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">쿠팡 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">롯데온 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">위메프 링크이동</a>
+                    </li>
+                    <li>
+                      <a href="#">티몬 링크이동</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="delete__btn toggle__btn">
+                  <img src="./images/delete.png" />
+
+                  <ul class="moving delete">
+                    <li>
+                      <a href="#">스마트스토어 상품 삭제</a>
+                    </li>
+                    <li>
+                      <a href="#">Gmarket 상품 삭제</a>
+                    </li>
+                    <li>
+                      <a href="#">Auction 상품 삭제</a>
+                    </li>
+                    <li>
+                      <a href="#">쿠팡 상품 삭제</a>
+                    </li>
+                    <li>
+                      <a href="#">롯데온 상품 삭제</a>
+                    </li>
+                    <li>
+                      <a href="#">위메프 상품 삭제</a>
+                    </li>
+                    <li>
+                      <a href="#">티몬 상품 삭제</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="confirm_cancel_btn">
-                <input type="submit" value="취소" class="cancel_btn" />
-                <input type="submit" value="저장" class="submit_btn" />
+              <div class="item-inner-title">
+                <div class="yellow-box"></div>
+                <div>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</div>
+              </div>
+              <div class="item-inner-edit-title">
+                <p>맥북거치대 접이식 휴대용 심플 리프팅 노트북 거치대</p>
+                <span>45 / 50 Bytes</span>
+              </div>
+              <div class="flexxx">
+                <li class="adjustment">
+                  <span class="option__modify"><a href="#">상품 옵션 수정</a><img src="./images/done.png" /></span>
+                  <span class="detail__modify"><a href="#">상세페이지 수정</a><img src="./images/done.png" /></span>
+                  <span class="fontcolor_gold">배송비 120,000원</span>
+                </li>
+                <div class="item_list_homepageicon">
+                  <div>
+                    <ul>
+                      <li><img src="./images/never.png" /></li>
+                      <li><img src="./images/11st.png" /></li>
+                      <li><img src="./images/gmarket.png" /></li>
+                      <li><img src="./images/action.png" /></li>
+                      <li><img src="./images/coupang.png" /></li>
+                      <li><img src="./images/lotteOn.png" /></li>
+                      <li><img src="./images/Wemakep.png" /></li>
+                    </ul>
+                  </div>
+                  <div class="uplaod_btn">
+                    <div class="hover__btn">
+                      업로드
+                      <ul class="upaload">
+                        <li>
+                          <a href="#">스마트스토어 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">Gmarket 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">Auction 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">쿠팡 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">롯데온 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">위메프 상품 업로드</a>
+                        </li>
+                        <li>
+                          <a href="#">티몬 상품 업로드</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- 상세 옵션 수정 -->
+  </div>
 
-    <!-- 상세 페이지 수정 -->
-    <div class="popup popup2">
-      <div class="popup__inner">
-        <div class="popup__close"></div>
-        <iframe src="./toast.html" frameborder="0"></iframe>
-      </div>
-    </div>
-    <!-- 상세 페이지 수정 -->
+  <!-- 팝업 및 팝업 뒷배경 -->
+  <div class="popup__dim"></div>
 
-    <!-- 카테고리 수정 -->
-    <div class="popup popup3">
-      <div class="popup__inner">
-        <div class="popup__close"></div>
-
-        <div class="category_edit">
-          <p>카테고리수정</p>
-          <div>
-            <ul>
-              <li>
-                <div>
-                  <img src="./images/never_icon.png" />
-                  <p>스마트스토어</p>
+  <!-- 상세 옵션 수정 -->
+  <div class="popup popup1">
+    <div class="popup__inner">
+      <div class="popup__close"></div>
+      <div class="option_change">
+        <div class="option_price_setting_left">
+          <div class="option_price_setting_upper">
+            <div class="subtitle">옵션 가격 설정</div>
+            <div class="option_price_setting_inner_container">
+              <div class="option_price_setting_inner_title">배송비</div>
+              <input type="text" placeholder="10,0000원" />
+              <div>원 추가하기</div>
+              <div class="apply">적용</div>
+            </div>
+            <div class="option_price_setting_inner_container">
+              <div class="option_price_setting_inner_title">선택 옵션 최저가 지정</div>
+              <div class="apply">적용</div>
+            </div>
+            <div class="option_price_setting_inner_container">
+              <div class="option_price_setting_inner_title">선택 옵션 최대가 설정</div>
+              <div class="apply">적용</div>
+            </div>
+            <div class="reset">
+              <div>가격 초기화</div>
+              <img src="./images/settings_backup_restore.png" alt="" />
+            </div>
+          </div>
+          <div class="option_price_setting_downner">
+            <div class="subtitle">옵션명 일괄수정</div>
+            <div class="option_price_setting_inner_container">
+              <div class="option_price_setting_inner_title">글자 변경</div>
+              <input type="text" placeholder="가나다라마" />
+              <p>></p>
+              <input type="text" placeholder="가나다라마" />
+              <div class="apply">적용</div>
+            </div>
+            <div class="option_price_setting_inner_container">
+              <div class="option_price_setting_inner_title">커스텀 글자 변경</div>
+              <div class="customtext__modify">설정</div>
+              <p></p>
+              <div class="apply">적용</div>
+            </div>
+            <div class="option_price_setting_inner_container">
+              <div class="option_price_setting_inner_title">특수문자 일괄 제거</div>
+              <div class="apply">적용</div>
+            </div>
+            <div class="option_price_setting_inner_container">
+              <div class="option_price_setting_inner_title">옵션명 일괄 변경</div>
+              <div id="bluetext">A~Z 옵션</div>
+              <p></p>
+              <div id="bluetext">1~N 옵션</div>
+            </div>
+            <div class="reset">
+              <div>옵션명 초기화</div>
+              <img src="./images/settings_backup_restore.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="option_price_setting_right">
+          <div class="option-price-top-container">
+            <input type="checkbox" name="" id="selectAll" />
+            <label class="selectAll" for="selectAll">전체선택</label>
+            <div>이미지</div>
+            <div>옵션가격/옵션명</div>
+          </div>
+          <div class="item-comtainer">
+            <div class="item-container-inner">
+              <div class="item-container-left">
+                <input type="checkbox" name="" id="" />
+                <div class="nth_of_item">1</div>
+                <img src="./images/sample_item.png" alt="" />
+              </div>
+              <div class="item-container-right">
+                <div class="item-container-right-first-element">
+                  <p>¥188.1</p>
+                  <input type="text" placeholder="30,000" />
                 </div>
-                <input type="text" name="category" class="text_field" placeholder="" />
-              </li>
-
-              <li>
-                <div>
-                  <img src="./images/11st_icon.png" />
-                  <p>11번가</p>
+                <input type="text" placeholder="A옵션" />
+              </div>
+            </div>
+            <div class="item-container-inner">
+              <div class="item-container-left">
+                <input type="checkbox" name="" id="" />
+                <div class="nth_of_item">1</div>
+                <img src="./images/sample_item.png" alt="" />
+              </div>
+              <div class="item-container-right">
+                <div class="item-container-right-first-element">
+                  <p>¥188.1</p>
+                  <input type="text" placeholder="30,000" />
                 </div>
-                <input type="text" name="category" class="text_field" placeholder="" />
-              </li>
-
-              <li>
-                <div>
-                  <img src="./images/gmarket_icon.png" />
-                  <p>지마켓</p>
+                <input type="text" placeholder="A옵션" />
+              </div>
+            </div>
+            <div class="item-container-inner">
+              <div class="item-container-left">
+                <input type="checkbox" name="" id="" />
+                <div class="nth_of_item">1</div>
+                <img src="./images/sample_item.png" alt="" />
+              </div>
+              <div class="item-container-right">
+                <div class="item-container-right-first-element">
+                  <p>¥188.1</p>
+                  <input type="text" placeholder="30,000" />
                 </div>
-                <input type="text" name="category" class="text_field" placeholder="" />
-              </li>
-
-              <li>
-                <div>
-                  <img src="./images/action_icon.png" />
-                  <p>옥션</p>
+                <input type="text" placeholder="A옵션" />
+              </div>
+            </div>
+            <div class="item-container-inner">
+              <div class="item-container-left">
+                <input type="checkbox" name="" id="" />
+                <div class="nth_of_item">1</div>
+                <img src="./images/sample_item.png" alt="" />
+              </div>
+              <div class="item-container-right">
+                <div class="item-container-right-first-element">
+                  <p>¥188.1</p>
+                  <input type="text" placeholder="30,000" />
                 </div>
-                <input type="text" name="category" class="text_field" placeholder="" />
-              </li>
-
-              <li>
-                <div>
-                  <img src="./images/coupang_icon.png" />
-                  <p>쿠팡</p>
+                <input type="text" placeholder="A옵션" />
+              </div>
+            </div>
+            <div class="item-container-inner">
+              <div class="item-container-left">
+                <input type="checkbox" name="" id="" />
+                <div class="nth_of_item">1</div>
+                <img src="./images/sample_item.png" alt="" />
+              </div>
+              <div class="item-container-right">
+                <div class="item-container-right-first-element">
+                  <p>¥188.1</p>
+                  <input type="text" placeholder="30,000" />
                 </div>
-                <input type="text" name="category" class="text_field" placeholder="" />
-              </li>
-
-              <li>
-                <div>
-                  <img src="./images/lotteOn_icon.png" />
-                  <p>롯데온</p>
+                <input type="text" placeholder="A옵션" />
+              </div>
+            </div>
+            <div class="item-container-inner">
+              <div class="item-container-left">
+                <input type="checkbox" name="" id="" />
+                <div class="nth_of_item">1</div>
+                <img src="./images/sample_item.png" alt="" />
+              </div>
+              <div class="item-container-right">
+                <div class="item-container-right-first-element">
+                  <p>¥188.1</p>
+                  <input type="text" placeholder="30,000" />
                 </div>
-                <input type="text" name="category" class="text_field" placeholder="" />
-              </li>
-
-              <li>
-                <div>
-                  <img src="./images/wmp_icon.png" />
-                  <p>위메프</p>
+                <input type="text" placeholder="A옵션" />
+              </div>
+            </div>
+            <div class="item-container-inner">
+              <div class="item-container-left">
+                <input type="checkbox" name="" id="" />
+                <div class="nth_of_item">1</div>
+                <img src="./images/sample_item.png" alt="" />
+              </div>
+              <div class="item-container-right">
+                <div class="item-container-right-first-element">
+                  <p>¥188.1</p>
+                  <input type="text" placeholder="30,000" />
                 </div>
-                <input type="text" name="category" class="text_field" placeholder="" />
-              </li>
-            </ul>
+                <input type="text" placeholder="A옵션" />
+              </div>
+            </div>
+            <div class="item-container-inner">
+              <div class="item-container-left">
+                <input type="checkbox" name="" id="" />
+                <div class="nth_of_item">1</div>
+                <img src="./images/sample_item.png" alt="" />
+              </div>
+              <div class="item-container-right">
+                <div class="item-container-right-first-element">
+                  <p>¥188.1</p>
+                  <input type="text" placeholder="30,000" />
+                </div>
+                <input type="text" placeholder="A옵션" />
+              </div>
+            </div>
           </div>
 
-          <div class="confirm_cancel_btn">
-            <input type="submit" value="취소" class="cancel_btn" />
-            <input type="submit" value="확인" class="submit_btn" />
+          <div>
+            <div>
+              <button>번역 전</button>
+              <button>번역 후</button>
+              <div>
+                <input type="checkbox" name="" id="" />
+                <p>상세페이지 옵션이미지 적용</p>
+              </div>
+            </div>
+            <div class="confirm_cancel_btn">
+              <input type="submit" value="취소" class="cancel_btn" />
+              <input type="submit" value="저장" class="submit_btn" />
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- 카테고리 수정 -->
+  </div>
+  <!-- 상세 옵션 수정 -->
 
-    <!-- 메인 페이지 수정 -->
-    <div class="popup popup4">
-      <div class="popup__inner">
-        <div class="popup__close"></div>
-        weeee
-      </div>
+  <!-- 상세 페이지 수정 -->
+  <div class="popup popup2">
+    <div class="popup__inner">
+      <div class="popup__close"></div>
+      <iframe src="./toast.html" frameborder="0"></iframe>
     </div>
-    <!-- 메인 페이지 수정 -->
+  </div>
+  <!-- 상세 페이지 수정 -->
 
-    <!-- 커스텀글자변경 수정 -->
-    <div class="popup popup5">
-      <div class="popup__inner">
-        <div class="popup__close"></div>
+  <!-- 카테고리 수정 -->
+  <div class="popup popup3">
+    <div class="popup__inner">
+      <div class="popup__close"></div>
 
-        <div class="custom_text_change">
-          <p>커스텀 글자변경 설정</p>
-          <!-- <a href="javascript:window.close();"> <img class="x_btn" src="./images/x_btn.png"></a> -->
-          <div>
-            <ul>
-              <li>
-                <span>1.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
+      <div class="category_edit">
+        <p>카테고리수정</p>
+        <div>
+          <ul>
+            <li>
+              <div>
+                <img src="./images/never_icon.png" />
+                <p>스마트스토어</p>
+              </div>
+              <input type="text" name="category" class="text_field" placeholder="" />
+            </li>
 
-              <li>
-                <span>2.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
+            <li>
+              <div>
+                <img src="./images/11st_icon.png" />
+                <p>11번가</p>
+              </div>
+              <input type="text" name="category" class="text_field" placeholder="" />
+            </li>
 
-              <li>
-                <span>3.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
+            <li>
+              <div>
+                <img src="./images/gmarket_icon.png" />
+                <p>지마켓</p>
+              </div>
+              <input type="text" name="category" class="text_field" placeholder="" />
+            </li>
 
-              <li>
-                <span>4.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
+            <li>
+              <div>
+                <img src="./images/action_icon.png" />
+                <p>옥션</p>
+              </div>
+              <input type="text" name="category" class="text_field" placeholder="" />
+            </li>
 
-              <li>
-                <span>5.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
+            <li>
+              <div>
+                <img src="./images/coupang_icon.png" />
+                <p>쿠팡</p>
+              </div>
+              <input type="text" name="category" class="text_field" placeholder="" />
+            </li>
 
-              <li>
-                <span>6.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
+            <li>
+              <div>
+                <img src="./images/lotteOn_icon.png" />
+                <p>롯데온</p>
+              </div>
+              <input type="text" name="category" class="text_field" placeholder="" />
+            </li>
 
-              <li>
-                <span>7.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
+            <li>
+              <div>
+                <img src="./images/wmp_icon.png" />
+                <p>위메프</p>
+              </div>
+              <input type="text" name="category" class="text_field" placeholder="" />
+            </li>
+          </ul>
+        </div>
 
-              <li>
-                <span>8.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
-
-              <li>
-                <span>9.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
-
-              <li class="last_text">
-                <span>10.</span>
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-                <img src="./images/east.png" />
-                <input type="text" name="text_custom" class="text_field" placeholder="" />
-              </li>
-            </ul>
-          </div>
-
-          <div class="confirm_cancel_btn">
-            <input type="submit" value="취 소" class="cancel_btn" />
-            <input type="submit" value="확 인" class="submit_btn" />
-          </div>
+        <div class="confirm_cancel_btn">
+          <input type="submit" value="취소" class="cancel_btn" />
+          <input type="submit" value="확인" class="submit_btn" />
         </div>
       </div>
     </div>
-    <!-- 커스텀글자변경 수정 -->
+  </div>
+  <!-- 카테고리 수정 -->
 
-    <script>
-      const modal_popup = function () {
-        //상품옵션 수정 팝업
-        $(".option__modify").click(function () {
-          $(".popup__dim").addClass("modal");
+  <!-- 메인 페이지 수정 -->
+  <div class="popup popup4">
+    <div class="popup__inner">
+      <div class="popup__close"></div>
+      weeee
+    </div>
+  </div>
+  <!-- 메인 페이지 수정 -->
+
+  <!-- 커스텀글자변경 수정 -->
+  <div class="popup popup5">
+    <div class="popup__inner">
+      <div class="popup__close"></div>
+
+      <div class="custom_text_change">
+        <p>커스텀 글자변경 설정</p>
+        <!-- <a href="javascript:window.close();"> <img class="x_btn" src="./images/x_btn.png"></a> -->
+        <div>
+          <ul>
+            <li>
+              <span>1.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+
+            <li>
+              <span>2.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+
+            <li>
+              <span>3.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+
+            <li>
+              <span>4.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+
+            <li>
+              <span>5.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+
+            <li>
+              <span>6.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+
+            <li>
+              <span>7.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+
+            <li>
+              <span>8.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+
+            <li>
+              <span>9.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+
+            <li class="last_text">
+              <span>10.</span>
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+              <img src="./images/east.png" />
+              <input type="text" name="text_custom" class="text_field" placeholder="" />
+            </li>
+          </ul>
+        </div>
+
+        <div class="confirm_cancel_btn">
+          <input type="submit" value="취 소" class="cancel_btn" />
+          <input type="submit" value="확 인" class="submit_btn" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 커스텀글자변경 수정 -->
+
+  <script>
+    const modal_popup = function () {
+      //상품옵션 수정 팝업
+      $(".option__modify").click(function () {
+        $(".popup__dim").addClass("modal");
+        $(".popup1").addClass("open");
+
+        $(".popup1 .popup__close, .popup1 .cancel_btn").click(function () {
+          $(".popup1").removeClass("open");
+          $(".popup__dim").removeClass("modal");
+        });
+      });
+
+      //상품페이지 수정 팝업
+      $(".detail__modify").click(function () {
+        $(".popup__dim").addClass("modal");
+        $(".popup2").addClass("open");
+
+        $(".popup2 .popup__close,.popup2 .cancel_btn").click(function () {
+          $(".popup2").removeClass("open");
+          $(".popup__dim").removeClass("modal");
+        });
+      });
+
+      //category 수정 팝업
+      $(".category__modify").click(function () {
+        $(".popup__dim").addClass("modal");
+        $(".popup3").addClass("open");
+
+        $(".popup3 .popup__close,.popup3 .cancel_btn").click(function () {
+          $(".popup3").removeClass("open");
+          $(".popup__dim").removeClass("modal");
+        });
+      });
+
+      //메인 페이지 수정 팝업
+      $(".item_list .basiclist_item .item_thumbnail").click(function () {
+        $(".popup__dim").addClass("modal");
+        $(".popup4").addClass("open");
+
+        $(".popup4 .popup__close,.popup4 .cancel_btn").click(function () {
+          $(".popup4").removeClass("open");
+          $(".popup__dim").removeClass("modal");
+        });
+      });
+
+      //커스텀 글자 변경 수정 팝업
+      $(".customtext__modify").click(function () {
+        $(".popup__dim").addClass("modal");
+        $(".popup5").addClass("open");
+
+        $(".popup1").addClass("opop");
+
+        $(".popup5 .popup__close,.popup5 .cancel_btn").click(function () {
+          $(".popup5").removeClass("open");
+          $(".popup__dim").removeClass("modal");
           $(".popup1").addClass("open");
-
-          $(".popup1 .popup__close, .popup1 .cancel_btn").click(function () {
-            $(".popup1").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-          });
-        });
-
-        //상품페이지 수정 팝업
-        $(".detail__modify").click(function () {
+          $(".popup1").removeClass("opop");
           $(".popup__dim").addClass("modal");
-          $(".popup2").addClass("open");
-
-          $(".popup2 .popup__close,.popup2 .cancel_btn").click(function () {
-            $(".popup2").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-          });
         });
+      });
 
-        //category 수정 팝업
-        $(".category__modify").click(function () {
+      $(".popup__dim").click(function () {
+        if ($(".popup1").hasClass("open")) {
+          $(".popup1").removeClass("open");
+          $(".popup__dim").removeClass("modal");
+        }
+        if ($(".popup2").hasClass("open")) {
+          $(".popup2").removeClass("open");
+          $(".popup__dim").removeClass("modal");
+        }
+        if ($(".popup3").hasClass("open")) {
+          $(".popup3").removeClass("open");
+          $(".popup__dim").removeClass("modal");
+        }
+        if ($(".popup4").hasClass("open")) {
+          $(".popup4").removeClass("open");
+          $(".popup__dim").removeClass("modal");
+        }
+        if ($(".popup5").hasClass("open")) {
+          $(".popup5").removeClass("open");
+          $(".popup__dim").removeClass("modal");
+          $(".popup1").addClass("open");
+          $(".popup1").removeClass("opop");
           $(".popup__dim").addClass("modal");
-          $(".popup3").addClass("open");
-
-          $(".popup3 .popup__close,.popup3 .cancel_btn").click(function () {
-            $(".popup3").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-          });
-        });
-
-        //메인 페이지 수정 팝업
-        $(".item_list .basiclist_item .item_thumbnail").click(function () {
-          $(".popup__dim").addClass("modal");
-          $(".popup4").addClass("open");
-
-          $(".popup4 .popup__close,.popup4 .cancel_btn").click(function () {
-            $(".popup4").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-          });
-        });
-
-        //커스텀 글자 변경 수정 팝업
-        $(".customtext__modify").click(function () {
-          $(".popup__dim").addClass("modal");
-          $(".popup5").addClass("open");
-
-          $(".popup1").addClass("opop");
-
-          $(".popup5 .popup__close,.popup5 .cancel_btn").click(function () {
-            $(".popup5").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-            $(".popup1").addClass("open");
-            $(".popup1").removeClass("opop");
-            $(".popup__dim").addClass("modal");
-          });
-        });
-
-        $(".popup__dim").click(function () {
-          if ($(".popup1").hasClass("open")) {
-            $(".popup1").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-          }
-          if ($(".popup2").hasClass("open")) {
-            $(".popup2").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-          }
-          if ($(".popup3").hasClass("open")) {
-            $(".popup3").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-          }
-          if ($(".popup4").hasClass("open")) {
-            $(".popup4").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-          }
-          if ($(".popup5").hasClass("open")) {
-            $(".popup5").removeClass("open");
-            $(".popup__dim").removeClass("modal");
-            $(".popup1").addClass("open");
-            $(".popup1").removeClass("opop");
-            $(".popup__dim").addClass("modal");
-          }
-        });
-      };
-
-      $(".toggle__btn").click(function (e) {
-        if ($(this).hasClass("act")) {
-          $(".toggle__btn").removeClass("act");
-          $(".toggle__btn").find("ul").removeClass("open");
-        } else {
-          $(".toggle__btn").removeClass("act");
-          $(".toggle__btn").find("ul").removeClass("open");
-          $(this).addClass("act");
-          $(this).find("ul").addClass("open");
         }
       });
+    };
 
-      $(".uplaod_btn").hover(
-        function () {
-          $(this).children().children().last().show();
-        },
-        function () {
-          $(this).children().children().last().hide();
-        }
-      );
+    $(".toggle__btn").click(function (e) {
+      if ($(this).hasClass("act")) {
+        $(".toggle__btn").removeClass("act");
+        $(".toggle__btn").find("ul").removeClass("open");
+      } else {
+        $(".toggle__btn").removeClass("act");
+        $(".toggle__btn").find("ul").removeClass("open");
+        $(this).addClass("act");
+        $(this).find("ul").addClass("open");
+      }
+    });
 
-      $(".preview").click(function () {
-        $(".mainpage_edit_content > div").toggleClass("active");
-      });
+    $(".uplaod_btn").hover(
+      function () {
+        $(this).children().children().last().show();
+      },
+      function () {
+        $(this).children().children().last().hide();
+      }
+    );
 
-      modal_popup();
+    $(".preview").click(function () {
+      $(".mainpage_edit_content > div").toggleClass("active");
+    });
 
-      $(".mainpage_edit_content > div ul li").click(function () {
-        $(".mainpage_edit_content > div ul li").removeClass("active");
-        $(this).addClass("active");
-      });
+    modal_popup();
 
-      var $sportAll = $("#Allcheck");
-      $sportAll.change(function () {
-        var $this = $(this);
-        var checked = $this.prop("checked"); // checked 문자열 참조(true, false)
-        // console.log(checked);
-        $('input[name="item"]').prop("checked", checked);
-      });
+    $(".mainpage_edit_content > div ul li").click(function () {
+      $(".mainpage_edit_content > div ul li").removeClass("active");
+      $(this).addClass("active");
+    });
 
-      var boxes = $('input[name="item"]');
-      boxes.change(function () {
-        // 첫 번째 방법
-        /*
-            var selectAll = true;
-            var count = boxes.length;
-            var i = 0;
-            for (; i < count; i++) {
-              if (!boxes[i].checked) {
-                selectAll = false;
-                break;
-              }
+    var $sportAll = $("#Allcheck");
+    $sportAll.change(function () {
+      var $this = $(this);
+      var checked = $this.prop("checked"); // checked 문자열 참조(true, false)
+      // console.log(checked);
+      $('input[name="item"]').prop("checked", checked);
+    });
+
+    var boxes = $('input[name="item"]');
+    boxes.change(function () {
+      // 첫 번째 방법
+      /*
+          var selectAll = true;
+          var count = boxes.length;
+          var i = 0;
+          for (; i < count; i++) {
+            if (!boxes[i].checked) {
+              selectAll = false;
+              break;
             }
-            */
+          }
+          */
 
-        // 두 번째 방법
-        var boxLength = boxes.length;
-        // 체크된 체크박스 갯수를 확인하기 위해 :checked 필터를 사용하여 체크박스만 선택한 후 length 프로퍼티를 확인
-        var checkedLength = $('input[name="item"]:checked').length;
-        var selectAll = boxLength == checkedLength;
+      // 두 번째 방법
+      var boxLength = boxes.length;
+      // 체크된 체크박스 갯수를 확인하기 위해 :checked 필터를 사용하여 체크박스만 선택한 후 length 프로퍼티를 확인
+      var checkedLength = $('input[name="item"]:checked').length;
+      var selectAll = boxLength == checkedLength;
 
-        $sportAll.prop("checked", selectAll);
-      });
-    </script>
-  </body>
+      $sportAll.prop("checked", selectAll);
+    });
+  </script>
+</body>
+
 </html>
