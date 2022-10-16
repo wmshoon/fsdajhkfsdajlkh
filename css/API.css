@@ -5,7 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
-  min-height: 752px;
+  height: 800px;
 }
 .api_main_homeicon {
   border-bottom: 1px solid #ddd;
